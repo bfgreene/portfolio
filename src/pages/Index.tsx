@@ -19,9 +19,9 @@ const Index = () => {
 
       <main className="max-w-4xl mx-auto px-6">
         {/* Intro */}
-        <section className="mb-12">
+        <section className="mb-4">
           <h1 className="text-2xl md:text-3xl mb-2">
-            Select Work
+            Selected Work
           </h1>
         </section>
 
@@ -36,12 +36,11 @@ const Index = () => {
               <div className="grid md:grid-cols-[260px_1fr] gap-5">
                 <Link to={`/project/${project.slug}`} className="block no-underline">
                   <div
-                    className="w-full aspect-[4/3] border border-foreground/15"
-                    style={{ backgroundColor: project.color }}
+                    className="w-full aspect-[4/3] border border-foreground/15 bg-primary"
                     title={`${project.title} — placeholder image`}
                   />
                 </Link>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-start">
                   <h2 className="text-xl mb-1">
                     <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
                       {project.title}
@@ -73,8 +72,7 @@ const Index = () => {
             {miscPhotos.map((item, i) => (
               <div key={i}>
                 <div
-                  className="w-full aspect-square border border-foreground/15 mb-2"
-                  style={{ backgroundColor: item.color }}
+                  className="w-full aspect-square border border-foreground/15 bg-primary mb-2"
                 />
                 <p className="text-xs text-muted-foreground">{item.caption}</p>
               </div>
