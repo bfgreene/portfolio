@@ -14,7 +14,7 @@ const miscPhotos = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Header />
 
       <main className="max-w-4xl mx-auto px-6">
@@ -26,13 +26,12 @@ const Index = () => {
           <p className="text-muted-foreground text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
             Production design, art direction, and art department work for film, television, and commercials.
           </p>
-          <hr className="border-t-2 border-foreground mt-4" />
         </section>
 
         {/* Projects */}
         <section className="mb-16">
           {projects.map((project, i) => (
-            <article key={project.slug} className={`grid md:grid-cols-[280px_1fr] gap-6 ${i > 0 ? "mt-10 pt-10 border-t border-foreground/20" : ""}`}>
+            <article key={project.slug} className={`grid md:grid-cols-[280px_1fr] gap-6 ${i > 0 ? "mt-10 pt-10" : ""}`}>
               <Link to={`/project/${project.slug}`} className="block no-underline">
                 <div
                   className="w-full aspect-[4/3] border-2 border-foreground"
@@ -68,7 +67,6 @@ const Index = () => {
           <p className="text-sm text-muted-foreground mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
             Process, details, and other work.
           </p>
-          <hr className="border-t border-foreground/20 mb-6" />
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {miscPhotos.map((item, i) => (
               <div key={i}>

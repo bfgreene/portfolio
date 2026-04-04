@@ -11,17 +11,17 @@ export interface ProjectData {
 
 export const projects: ProjectData[] = [
   {
-    slug: "the-gilded-hour",
-    title: "The Gilded Hour",
+    slug: "toe",
+    title: "TOE",
     role: "Production Designer",
     year: "2025",
     color: "hsl(35, 40%, 70%)",
     shortDescription:
-      "Period drama set in 1920s New York. Full set construction of a five-room brownstone interior with over 200 period-accurate props.",
+      "Period drama requiring full set construction of a five-room interior with over 200 period-accurate props and custom scenic painting.",
     longDescription: [
-      "The Gilded Hour required building an entire 1920s brownstone interior from scratch on a soundstage in Brooklyn. The director wanted warmth and intimacy — amber lighting, worn leather, tobacco-stained wallpaper.",
-      "I sourced over 200 period-accurate props from estate sales and antique dealers across the Northeast. Every book spine, every ashtray, every light fixture was vetted for accuracy.",
-      "The color palette centered on warm ambers, deep burgundies, and aged brass. We developed custom wallpaper prints based on archived patterns from the New York Historical Society.",
+      "TOE required building an entire period interior from scratch on a soundstage. The director wanted warmth and intimacy — amber lighting, worn leather, tobacco-stained wallpaper.",
+      "I sourced over 200 period-accurate props from estate sales and antique dealers. Every book spine, every ashtray, every light fixture was vetted for accuracy.",
+      "The color palette centered on warm ambers, deep burgundies, and aged brass. We developed custom wallpaper prints based on archived patterns.",
     ],
     galleryColors: [
       "hsl(35, 45%, 65%)",
@@ -31,17 +31,17 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "neon-diner",
-    title: "Neon Diner",
+    slug: "song-of-the-wind",
+    title: "Song of the Wind",
     role: "Art Director",
     year: "2024",
     color: "hsl(340, 50%, 55%)",
     shortDescription:
-      "Short film requiring a complete retro diner build on a soundstage. Custom signage fabrication and practical lighting integration.",
+      "Short film requiring a complete retro set build on a soundstage. Custom signage fabrication and practical lighting integration.",
     longDescription: [
-      "Neon Diner was a 15-minute short about a late-night encounter between two strangers. The entire film takes place in a single location — a fictional roadside diner somewhere in the American Southwest.",
-      "We built the diner from the ground up: vinyl booths, Formica countertops, a working jukebox, and three custom neon signs. The DP and I collaborated closely on integrating practical neon lighting into the set.",
-      "Scenic painting was critical here. Every surface needed to look like it had 40 years of grease and wear. I developed a layered aging technique using glazes and dry-brushing.",
+      "Song of the Wind was a visually driven short about memory and place. The entire film takes place across two carefully constructed environments.",
+      "We built the sets from the ground up: every surface needed to feel lived-in and authentic. The DP and I collaborated closely on integrating practical lighting into the set design.",
+      "Scenic painting was critical here. Every surface needed to look like it had decades of wear. I developed a layered aging technique using glazes and dry-brushing.",
     ],
     galleryColors: [
       "hsl(340, 55%, 50%)",
@@ -51,17 +51,17 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "small-town-usa",
-    title: "Small Town, USA",
+    slug: "winloot",
+    title: "Winloot",
     role: "Production Designer",
     year: "2024",
     color: "hsl(150, 25%, 60%)",
     shortDescription:
-      "1:24 scale miniature of a fictional American main street for a mixed-media documentary. Model-making, weathering, and miniature lighting.",
+      "Commercial campaign with multiple set builds across three shooting days. Model-making, set dressing, and on-set art direction.",
     longDescription: [
-      "This mixed-media documentary used miniatures to represent a vanishing version of small-town America. I designed and built a 1:24 scale model of a fictional main street — eight buildings, streetlights, signage, and landscaping.",
-      "Each building was constructed from foam core, balsa wood, and found materials. Weathering was done with acrylic washes, chalks, and careful sanding. The goal was photorealism at macro distances.",
-      "Miniature lighting rigs used grain-of-wheat bulbs and fiber optics. The director wanted the models to feel alive, so we wired each building individually and programmed subtle flicker patterns.",
+      "Winloot was a multi-spot commercial campaign that required versatile, eye-catching environments built to camera on tight timelines.",
+      "Each set was constructed to be modular and re-dressable, allowing us to create distinct looks within the same stage footprint.",
+      "The art direction balanced bold, graphic compositions with practical construction. Every element was designed to pop on screen while maintaining a handmade quality.",
     ],
     galleryColors: [
       "hsl(150, 20%, 55%)",
@@ -71,17 +71,17 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "canvas-and-curtain",
-    title: "Canvas & Curtain",
+    slug: "mitski",
+    title: "Mitski",
     role: "Scenic Artist / Art Director",
     year: "2023",
     color: "hsl(260, 30%, 60%)",
     shortDescription:
-      "Large-format scenic painting for a theatre-to-film adaptation. 30-foot painted backdrop and full art department management.",
+      "Music video with large-format scenic painting, a 30-foot painted backdrop, and full art department coordination.",
     longDescription: [
-      "Canvas & Curtain bridged theatre and film — a stage play adapted for the screen while keeping its theatrical roots visible. The director wanted painted backdrops instead of digital extensions.",
-      "I painted a 30-foot canvas backdrop depicting a twilight cityscape. The technique combined traditional scenic painting methods with contemporary color theory to read well on camera.",
-      "Managing the art department through a tight three-week prep was the other half of the job. Coordinating scenic painters, set dressers, and props buyers across two locations required careful scheduling and clear communication.",
+      "This Mitski music video required blending theatrical and cinematic visual languages. The director wanted painted backdrops instead of digital extensions.",
+      "I painted a 30-foot canvas backdrop depicting a surreal dreamscape. The technique combined traditional scenic painting methods with contemporary color theory to read well on camera.",
+      "Managing the art department through a tight prep was the other half of the job. Coordinating scenic painters, set dressers, and props buyers across two locations required careful scheduling.",
     ],
     galleryColors: [
       "hsl(260, 35%, 55%)",
@@ -91,17 +91,17 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "rust-and-bloom",
-    title: "Rust & Bloom",
+    slug: "cognaitive",
+    title: "CognAItive",
     role: "Art Department Coordinator",
     year: "2022",
     color: "hsl(20, 50%, 55%)",
     shortDescription:
-      "Independent feature film shot across three states. Managed logistics, sourced locations, and coordinated a 12-person art department.",
+      "Independent feature film shot across multiple locations. Managed logistics, sourced locations, and coordinated a 12-person art department.",
     longDescription: [
-      "Rust & Bloom was a road movie that took us through rural Pennsylvania, West Virginia, and Ohio. Each location needed to feel distinct but connected — a single emotional throughline across diverse geography.",
-      "I coordinated a 12-person art department across all three states, managing transport, local sourcing, and location agreements. We dressed over 20 locations in six weeks.",
-      "The palette was dictated by the landscape — rust reds, harvest golds, weathered greens. We supplemented natural environments with careful set dressing: a specific curtain color here, a repainted mailbox there.",
+      "CognAItive was an ambitious indie feature that explored themes of technology and identity. Each location needed to feel distinct but connected — a single emotional throughline across diverse settings.",
+      "I coordinated a 12-person art department across all locations, managing transport, local sourcing, and location agreements. We dressed over 20 locations in six weeks.",
+      "The palette mixed cold, sterile tech environments with warm, lived-in personal spaces — creating visual tension that mirrored the film's themes.",
     ],
     galleryColors: [
       "hsl(20, 55%, 50%)",
