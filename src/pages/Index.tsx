@@ -1,50 +1,15 @@
-import heroBg from "@/assets/hero-bg.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ProjectCard from "@/components/ProjectCard";
-import MiscGallery from "@/components/MiscGallery";
+import { projects } from "@/data/projects";
 
-const projects = [
-  {
-    title: "The Gilded Hour",
-    role: "Production Designer",
-    year: "2025",
-    description:
-      "Period drama set in 1920s New York. Oversaw full set construction of a five-room brownstone interior, sourced over 200 period-accurate props, and developed the film's warm amber and burgundy palette.",
-    imageSrc: project1,
-    imageAlt: "Mood board for The Gilded Hour",
-  },
-  {
-    title: "Neon Diner",
-    role: "Art Director",
-    year: "2024",
-    description:
-      "Short film requiring a complete retro diner build on a soundstage. Managed scenic painting, custom signage fabrication, and coordinated with the DP on practical lighting integration.",
-    imageSrc: project2,
-    imageAlt: "Behind the scenes of Neon Diner set",
-  },
-  {
-    title: "Small Town, USA",
-    role: "Production Designer",
-    year: "2024",
-    description:
-      "Built a 1:24 scale miniature of a fictional American main street for a mixed-media documentary. Handled model-making, weathering, and miniature lighting rigs.",
-    imageSrc: project3,
-    imageAlt: "Miniature city street model",
-  },
-  {
-    title: "Canvas & Curtain",
-    role: "Scenic Artist / Art Director",
-    year: "2023",
-    description:
-      "Large-format scenic painting for a theatre-to-film adaptation. Created a 30-foot painted backdrop and managed the art department through a tight three-week prep schedule.",
-    imageSrc: project4,
-    imageAlt: "Scenic painting in progress on set",
-  },
+const miscPhotos = [
+  { color: "hsl(45, 30%, 75%)", caption: "Floor plan sketches for a short film set build." },
+  { color: "hsl(200, 20%, 65%)", caption: "Developing the palette for an upcoming period piece." },
+  { color: "hsl(0, 15%, 70%)", caption: "Sourcing and aging props for a commercial shoot." },
+  { color: "hsl(120, 15%, 65%)", caption: "Miniature tree fabrication, close-up." },
+  { color: "hsl(280, 15%, 70%)", caption: "Fabric swatches for set dressing research." },
+  { color: "hsl(30, 25%, 68%)", caption: "Workshop detail — scenic paint mixing station." },
 ];
 
 const Index = () => {
@@ -52,45 +17,71 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img
-          src={heroBg}
-          alt="Production design workspace"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-foreground/50" />
-        <div className="relative z-10 h-full flex flex-col justify-end pb-16 px-6">
-          <div className="max-w-5xl mx-auto w-full">
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary-foreground/70 mb-3">
-              Production Designer & Art Director
-            </p>
-            <h1 className="font-heading text-5xl md:text-7xl text-primary-foreground leading-[0.95]">
-              Your Name
-            </h1>
-          </div>
-        </div>
-      </section>
+      <main className="max-w-4xl mx-auto px-6">
+        {/* Intro */}
+        <section className="mb-12">
+          <h1 className="text-3xl md:text-4xl mb-2" style={{ fontFamily: "Arial, sans-serif" }}>
+            Selected Work
+          </h1>
+          <p className="text-muted-foreground text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+            Production design, art direction, and art department work for film, television, and commercials.
+          </p>
+          <hr className="border-t-2 border-foreground mt-4" />
+        </section>
 
-      {/* Projects */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto space-y-24">
-          <div>
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">Selected</p>
-            <h2 className="font-heading text-3xl md:text-4xl text-foreground">Projects</h2>
-          </div>
+        {/* Projects */}
+        <section className="mb-16">
           {projects.map((project, i) => (
-            <ProjectCard key={project.title} {...project} reverse={i % 2 !== 0} />
+            <article key={project.slug} className={`grid md:grid-cols-[280px_1fr] gap-6 ${i > 0 ? "mt-10 pt-10 border-t border-foreground/20" : ""}`}>
+              <Link to={`/project/${project.slug}`} className="block no-underline">
+                <div
+                  className="w-full aspect-[4/3] border-2 border-foreground"
+                  style={{ backgroundColor: project.color }}
+                  title={`${project.title} — placeholder image`}
+                />
+              </Link>
+              <div>
+                <p className="text-xs text-muted-foreground mb-1" style={{ fontFamily: "Arial, sans-serif" }}>
+                  {project.role} — {project.year}
+                </p>
+                <h2 className="text-xl mb-2" style={{ fontFamily: "Arial, sans-serif" }}>
+                  <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
+                    {project.title}
+                  </Link>
+                </h2>
+                <p className="text-sm leading-relaxed mb-3">{project.shortDescription}</p>
+                <Link
+                  to={`/project/${project.slug}`}
+                  className="text-sm text-primary underline hover:text-accent"
+                  style={{ fontFamily: "Arial, sans-serif" }}
+                >
+                  View project →
+                </Link>
+              </div>
+            </article>
           ))}
-        </div>
-      </section>
+        </section>
 
-      {/* Misc Gallery */}
-      <div className="border-t border-border">
-        <MiscGallery />
-      </div>
+        {/* Misc */}
+        <section className="mb-8">
+          <h2 className="text-2xl mb-1" style={{ fontFamily: "Arial, sans-serif" }}>Bits &amp; Pieces</h2>
+          <p className="text-sm text-muted-foreground mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
+            Process, details, and other work.
+          </p>
+          <hr className="border-t border-foreground/20 mb-6" />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {miscPhotos.map((item, i) => (
+              <div key={i}>
+                <div
+                  className="w-full aspect-square border-2 border-foreground mb-2"
+                  style={{ backgroundColor: item.color }}
+                />
+                <p className="text-xs text-muted-foreground">{item.caption}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
 
       <Footer />
     </div>
