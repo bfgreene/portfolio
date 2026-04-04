@@ -21,11 +21,8 @@ const Index = () => {
         {/* Intro */}
         <section className="mb-12">
           <h1 className="text-2xl md:text-3xl mb-2">
-            Selected Work
+            Select Work
           </h1>
-          <p className="text-muted-foreground text-sm italic">
-            Production design, art direction, and art department work for film, television, and commercials.
-          </p>
         </section>
 
         {/* Projects */}
