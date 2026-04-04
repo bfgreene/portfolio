@@ -33,7 +33,7 @@ const Index = () => {
         {projects.map((project, i) => (
             <article
               key={project.slug}
-              className={`border border-foreground/20 p-5 ${i > 0 ? "mt-6" : ""}`}
+              className={`border-2 border-foreground p-5 ${i > 0 ? "mt-6" : ""}`}
               style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
             >
               <div className="grid md:grid-cols-[260px_1fr] gap-5">
