@@ -20,7 +20,7 @@ const About = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Bio */}
         <section className="mb-12">
-          <h1 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h1 className="text-3xl md:text-4xl mb-6">
             About
           </h1>
           <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
