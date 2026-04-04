@@ -68,9 +68,9 @@ const About = () => {
 
         {/* CV */}
         <section className="mb-8">
-          <h2 className="text-xl mb-4" style={{ fontFamily: "Arial, sans-serif" }}>C.V.</h2>
-          <div className="border-2 border-foreground">
-            <table className="w-full text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h2 className="text-xl mb-4">C.V.</h2>
+          <div className="border border-foreground/20">
+            <table className="w-full text-sm">
               <thead>
                 <tr className="border-b-2 border-foreground bg-secondary">
                   <th className="text-left py-2 px-3 font-bold">Year</th>
