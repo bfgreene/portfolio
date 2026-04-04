@@ -39,7 +39,7 @@ const Header = () => {
             ))}
           </nav>
         </div>
-        <div className="border-b border-primary/40" />
+        <div className="border-b-2 border-foreground" />
       </div>
     </header>
   );
