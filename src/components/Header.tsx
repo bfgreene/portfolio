@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   const links = [
-    { to: "/", label: "Selected Work" },
+    { to: "/", label: "Select Work" },
     { to: "/about", label: "About" },
   ];
 
