@@ -39,7 +39,7 @@ const ProjectDetail = () => {
 
           {/* Hero image */}
           <div
-            className="w-full aspect-[16/9] border-2 border-foreground mb-8"
+            className="w-full aspect-[16/9] border border-foreground/15 mb-8"
             style={{ backgroundColor: project.color }}
             title={`${project.title} — hero placeholder`}
           />
