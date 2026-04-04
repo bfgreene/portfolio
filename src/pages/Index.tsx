@@ -40,7 +40,7 @@ const Index = () => {
                     title={`${project.title} — placeholder image`}
                   />
                 </Link>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-start">
                   <h2 className="text-xl mb-1">
                     <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
                       {project.title}
