@@ -19,9 +19,9 @@ const Index = () => {
 
       <main className="max-w-4xl mx-auto px-6">
         {/* Intro */}
-        <section className="mb-12">
+        <section className="mb-4">
           <h1 className="text-2xl md:text-3xl mb-2">
-            Select Work
+            Selected Work
           </h1>
         </section>
 
