@@ -13,8 +13,8 @@ export const projects: ProjectData[] = [
   {
     slug: "toe",
     title: "TOE",
-    role: "Production Designer",
-    year: "2025",
+    role: "Art Director",
+    year: "2024",
     color: "hsl(35, 40%, 70%)",
     shortDescription:
       "Period drama requiring full set construction of a five-room interior with over 200 period-accurate props and custom scenic painting.",
@@ -73,8 +73,8 @@ export const projects: ProjectData[] = [
   {
     slug: "mitski",
     title: "Mitski",
-    role: "Scenic Artist / Art Director",
-    year: "2023",
+    role: "Prop Master / Set Dresser",
+    year: "2025",
     color: "hsl(260, 30%, 60%)",
     shortDescription:
       "Music video with large-format scenic painting, a 30-foot painted backdrop, and full art department coordination.",
@@ -93,8 +93,8 @@ export const projects: ProjectData[] = [
   {
     slug: "cognaitive",
     title: "CognAItive",
-    role: "Art Department Coordinator",
-    year: "2022",
+    role: "Set Dresser / Graphics",
+    year: "2024",
     color: "hsl(20, 50%, 55%)",
     shortDescription:
       "Independent feature film shot across multiple locations. Managed logistics, sourced locations, and coordinated a 12-person art department.",
