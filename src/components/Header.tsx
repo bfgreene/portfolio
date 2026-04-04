@@ -1,7 +1,28 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState, useCallback } from "react";
+
+const BOLD_COLORS = [
+  "#FF0000", "#FF4500", "#FF6347", "#DC143C",
+  "#FF1493", "#FF00FF", "#8B008B", "#9400D3",
+  "#7B68EE", "#4169E1", "#00BFFF", "#00CED1",
+  "#008080", "#00FA9A", "#32CD32", "#228B22",
+  "#FFD700", "#FFA500", "#FF8C00", "#E91E63",
+  "#9C27B0", "#673AB7", "#3F51B5", "#009688",
+  "#795548", "#F44336", "#CDDC39", "#00BCD4",
+];
 
 const Header = () => {
   const location = useLocation();
+  const [nameColor, setNameColor] = useState<string | null>(null);
+
+  const handleMouseEnter = useCallback(() => {
+    const randomColor = BOLD_COLORS[Math.floor(Math.random() * BOLD_COLORS.length)];
+    setNameColor(randomColor);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setNameColor(null);
+  }, []);
 
   const links = [
     { to: "/", label: "Selected Work" },
@@ -15,7 +36,10 @@ const Header = () => {
           <div>
             <Link
               to="/"
-              className="text-primary no-underline text-3xl md:text-4xl font-bold hover:text-accent"
+              className="no-underline text-3xl md:text-4xl font-bold transition-colors duration-150"
+              style={{ color: nameColor || "hsl(240, 100%, 50%)" }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               Benjamin Greene
             </Link>
