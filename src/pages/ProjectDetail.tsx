@@ -25,7 +25,7 @@ const ProjectDetail = () => {
       <Header />
 
       <main className="max-w-4xl mx-auto px-6">
-        <Link to="/" className="text-sm text-primary hover:text-accent" style={{ fontFamily: "Arial, sans-serif" }}>
+        <Link to="/" className="text-sm text-primary hover:text-accent">
           ← Back to selected work
         </Link>
 
