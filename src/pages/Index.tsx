@@ -68,8 +68,8 @@ const Index = () => {
 
         {/* Misc */}
         <section className="mb-8">
-          <h2 className="text-2xl mb-1" style={{ fontFamily: "Arial, sans-serif" }}>Bits &amp; Pieces</h2>
-          <p className="text-sm text-muted-foreground mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h2 className="text-2xl mb-1">Bits &amp; Pieces</h2>
+          <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
