@@ -9,8 +9,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="py-6 px-6 mb-8">
-      <div className="max-w-4xl mx-auto">
+    <header className="py-6 mb-8">
+      <div className="max-w-4xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1 sm:gap-4 mb-4">
           <div>
             <Link
