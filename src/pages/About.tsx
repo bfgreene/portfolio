@@ -72,7 +72,7 @@ const About = () => {
           <div className="border border-foreground/20">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b-2 border-foreground bg-secondary">
+                <tr className="border-b border-foreground/20 bg-secondary">
                   <th className="text-left py-2 px-3 font-bold">Year</th>
                   <th className="text-left py-2 px-3 font-bold">Project</th>
                   <th className="text-left py-2 px-3 font-bold hidden sm:table-cell">Role</th>

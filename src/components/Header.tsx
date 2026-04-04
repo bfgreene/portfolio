@@ -23,7 +23,7 @@ const Header = () => {
               Production Designer &amp; Art Director
             </p>
           </div>
-          <nav className="flex gap-4 text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+          <nav className="flex gap-4 text-sm">
             {links.map((link) => (
               <Link
                 key={link.to}

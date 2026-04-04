@@ -57,7 +57,7 @@ const ProjectDetail = () => {
             {project.galleryColors.map((color, i) => (
               <div
                 key={i}
-                className="w-full aspect-[4/3] border-2 border-foreground"
+                className="w-full aspect-[4/3] border border-foreground/15"
                 style={{ backgroundColor: color }}
                 title={`${project.title} — gallery image ${i + 1}`}
               />
