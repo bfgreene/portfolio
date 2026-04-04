@@ -52,7 +52,7 @@ const ProjectDetail = () => {
           </div>
 
           {/* Gallery */}
-          <h2 className="text-xl mb-4" style={{ fontFamily: "Arial, sans-serif" }}>Gallery</h2>
+          <h2 className="text-xl mb-4">Gallery</h2>
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
             {project.galleryColors.map((color, i) => (
               <div
