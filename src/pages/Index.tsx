@@ -72,8 +72,7 @@ const Index = () => {
             {miscPhotos.map((item, i) => (
               <div key={i}>
                 <div
-                  className="w-full aspect-square border border-foreground/15 mb-2"
-                  style={{ backgroundColor: item.color }}
+                  className="w-full aspect-square border border-foreground/15 bg-primary mb-2"
                 />
                 <p className="text-xs text-muted-foreground">{item.caption}</p>
               </div>
