@@ -1,12 +1,7 @@
 const Footer = () => (
-  <footer className="border-t border-border py-8 px-6">
-    <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p className="font-mono text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Your Name
-      </p>
-      <p className="font-mono text-xs text-muted-foreground">
-        Production Designer / Art Director
-      </p>
+  <footer className="border-t-2 border-foreground mt-12 py-6 px-6">
+    <div className="max-w-4xl mx-auto text-sm text-muted-foreground" style={{ fontFamily: "Arial, sans-serif" }}>
+      <p>© {new Date().getFullYear()} Benjamin Greene — Production Designer / Art Director</p>
     </div>
   </footer>
 );

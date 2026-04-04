@@ -3,29 +3,35 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const location = useLocation();
 
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+  ];
+
   return (
-    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-heading text-xl tracking-tight text-foreground hover:text-accent transition-colors">
-          Your Name
+    <header className="border-b-2 border-foreground py-4 px-6 mb-8">
+      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        <Link
+          to="/"
+          className="text-foreground no-underline text-xl font-bold"
+          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+        >
+          Benjamin Greene
         </Link>
-        <nav className="flex gap-6 font-mono text-xs uppercase tracking-widest">
-          <Link
-            to="/"
-            className={`transition-colors hover:text-accent ${
-              location.pathname === "/" ? "text-accent" : "text-muted-foreground"
-            }`}
-          >
-            Work
-          </Link>
-          <Link
-            to="/about"
-            className={`transition-colors hover:text-accent ${
-              location.pathname === "/about" ? "text-accent" : "text-muted-foreground"
-            }`}
-          >
-            About
-          </Link>
+        <nav className="flex gap-4 text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+          {links.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className={`underline hover:text-accent ${
+                location.pathname === link.to
+                  ? "text-accent font-bold"
+                  : "text-primary"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
