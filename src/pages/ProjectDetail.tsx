@@ -30,10 +30,10 @@ const ProjectDetail = () => {
         </Link>
 
         <section className="mt-6 mb-8">
-          <p className="text-xs text-muted-foreground mb-1" style={{ fontFamily: "Arial, sans-serif" }}>
-            {project.role} — {project.year}
+          <p className="text-xs text-muted-foreground mb-1 italic">
+            {project.role} · {project.year}
           </p>
-          <h1 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h1 className="text-3xl md:text-4xl mb-6">
             {project.title}
           </h1>
 
