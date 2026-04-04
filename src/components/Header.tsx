@@ -15,7 +15,7 @@ const Header = () => {
           <div>
             <Link
               to="/"
-              className="text-primary no-underline text-2xl font-bold hover:text-accent"
+              className="text-primary no-underline text-3xl md:text-4xl font-bold hover:text-accent"
             >
               Benjamin Greene
             </Link>

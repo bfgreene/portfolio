@@ -20,7 +20,7 @@ const Index = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Intro */}
         <section className="mb-12">
-          <h1 className="text-3xl md:text-4xl mb-2">
+          <h1 className="text-2xl md:text-3xl mb-2">
             Selected Work
           </h1>
           <p className="text-muted-foreground text-sm italic">
@@ -68,7 +68,7 @@ const Index = () => {
 
         {/* Misc */}
         <section className="mb-8">
-          <h2 className="text-2xl mb-1">Bits &amp; Pieces</h2>
+          <h2 className="text-2xl md:text-3xl mb-1">Miscellaneous</h2>
           <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>
