@@ -74,28 +74,19 @@ const About = () => {
         {/* CV */}
         <section className="mb-8">
           <h2 className="text-xl mb-4">C.V.</h2>
-          <div className="border border-foreground/20">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-foreground/20 bg-secondary">
-                  <th className="text-left py-2 px-3 font-bold">Year</th>
-                  <th className="text-left py-2 px-3 font-bold">Project</th>
-                  <th className="text-left py-2 px-3 font-bold hidden sm:table-cell">Role</th>
-                  <th className="text-right py-2 px-3 font-bold">Type</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cvEntries.map((entry, i) => (
-                  <tr key={i} className={i < cvEntries.length - 1 ? "border-b border-foreground/20" : ""}>
-                    <td className="py-2 px-3 text-muted-foreground">{entry.year}</td>
-                    <td className="py-2 px-3 font-bold">{entry.title}</td>
-                    <td className="py-2 px-3 text-muted-foreground hidden sm:table-cell">{entry.role}</td>
-                    <td className="py-2 px-3 text-muted-foreground text-right">{entry.type}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ul className="space-y-1.5 text-sm list-none p-0">
+            {cvEntries.map((entry, i) => (
+              <li key={i}>
+                <span className="text-muted-foreground">{entry.year}</span>
+                {" — "}
+                <span className="font-bold">{entry.title}</span>
+                {" · "}
+                <span className="italic">{entry.role}</span>
+                {" · "}
+                <span className="text-muted-foreground">{entry.type}</span>
+              </li>
+            ))}
+          </ul>
         </section>
       </main>
 
