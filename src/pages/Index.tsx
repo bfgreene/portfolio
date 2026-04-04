@@ -36,8 +36,7 @@ const Index = () => {
               <div className="grid md:grid-cols-[260px_1fr] gap-5">
                 <Link to={`/project/${project.slug}`} className="block no-underline">
                   <div
-                    className="w-full aspect-[4/3] border border-foreground/15"
-                    style={{ backgroundColor: project.color }}
+                    className="w-full aspect-[4/3] border border-foreground/15 bg-primary"
                     title={`${project.title} — placeholder image`}
                   />
                 </Link>
