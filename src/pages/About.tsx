@@ -2,14 +2,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const cvEntries = [
-  { year: "2025", title: "TOE", role: "Production Designer", type: "Feature Film" },
+  { year: "2024", title: "TOE", role: "Art Director", type: "Short Film" },
   { year: "2024", title: "Song of the Wind", role: "Art Director", type: "Short Film" },
   { year: "2024", title: "Winloot", role: "Production Designer", type: "Commercial" },
-  { year: "2023", title: "Mitski", role: "Scenic Artist / Art Director", type: "Music Video" },
-  { year: "2023", title: "Reverie", role: "Set Decorator", type: "Music Video" },
-  { year: "2022", title: "CognAItive", role: "Art Dept. Coordinator", type: "Feature Film" },
-  { year: "2022", title: "Glass Houses", role: "Art Director", type: "Short Film" },
-  { year: "2021", title: "The Long Way Home", role: "Standby Art Director", type: "TV Series" },
+  { year: "2025", title: "Mitski", role: "Prop Master / Set Dresser", type: "Music Video" },
+  { year: "2025", title: "Beneath the Calm", role: "Prop Master", type: "Short Film" },
+  { year: "2024", title: "CognAItive", role: "Set Dresser / Graphics", type: "Feature Film" },
+  { year: "2026", title: "Liberty Mutual x Pinterest", role: "Art Director", type: "Commercial" },
+  { year: "2025", title: "Thank You for Coming", role: "Production Designer", type: "Short Film" },
+  { year: "2025", title: "Cocomelon: The Melon Patch", role: "Art Director", type: "Web Series" },
+  { year: "2024", title: "Haim", role: "Art Director", type: "Short Film" },
+  { year: "2025", title: "Of Lambs and Wolves", role: "Art Director", type: "Short Film" },
+  { year: "2024", title: "[Terminate]", role: "Production Designer", type: "Short Film" },
+  { year: "2024", title: "Tender", role: "Graphics", type: "Short Film" },
 ];
 
 const About = () => {
