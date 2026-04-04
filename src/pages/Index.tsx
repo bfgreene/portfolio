@@ -20,10 +20,10 @@ const Index = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Intro */}
         <section className="mb-12">
-          <h1 className="text-3xl md:text-4xl mb-2" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h1 className="text-3xl md:text-4xl mb-2">
             Selected Work
           </h1>
-          <p className="text-muted-foreground text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+          <p className="text-muted-foreground text-sm italic">
             Production design, art direction, and art department work for film, television, and commercials.
           </p>
         </section>
