@@ -65,7 +65,7 @@ const Index = () => {
 
         {/* Misc */}
         <section className="mb-8">
-          <h2 className="text-2xl md:text-3xl mb-1">Miscellaneous</h2>
+          <h2 className="text-2xl md:text-3xl mb-1">Misc.</h2>
           <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>
