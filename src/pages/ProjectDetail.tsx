@@ -9,7 +9,7 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <Header />
         <main className="max-w-4xl mx-auto px-6 py-12">
           <p>Project not found.</p>
@@ -21,7 +21,7 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Header />
 
       <main className="max-w-4xl mx-auto px-6">
@@ -33,10 +33,9 @@ const ProjectDetail = () => {
           <p className="text-xs text-muted-foreground mb-1" style={{ fontFamily: "Arial, sans-serif" }}>
             {project.role} — {project.year}
           </p>
-          <h1 className="text-3xl md:text-4xl mb-4" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h1 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
             {project.title}
           </h1>
-          <hr className="border-t-2 border-foreground mb-6" />
 
           {/* Hero image */}
           <div
@@ -54,7 +53,6 @@ const ProjectDetail = () => {
 
           {/* Gallery */}
           <h2 className="text-xl mb-4" style={{ fontFamily: "Arial, sans-serif" }}>Gallery</h2>
-          <hr className="border-t border-foreground/20 mb-6" />
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
             {project.galleryColors.map((color, i) => (
               <div
