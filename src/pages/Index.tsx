@@ -30,32 +30,37 @@ const Index = () => {
 
         {/* Projects */}
         <section className="mb-16">
-          {projects.map((project, i) => (
-            <article key={project.slug} className={`grid md:grid-cols-[280px_1fr] gap-6 ${i > 0 ? "mt-10 pt-10" : ""}`}>
-              <Link to={`/project/${project.slug}`} className="block no-underline">
-                <div
-                  className="w-full aspect-[4/3] border-2 border-foreground"
-                  style={{ backgroundColor: project.color }}
-                  title={`${project.title} — placeholder image`}
-                />
-              </Link>
-              <div>
-                <p className="text-xs text-muted-foreground mb-1" style={{ fontFamily: "Arial, sans-serif" }}>
-                  {project.role} — {project.year}
-                </p>
-                <h2 className="text-xl mb-2" style={{ fontFamily: "Arial, sans-serif" }}>
-                  <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
-                    {project.title}
-                  </Link>
-                </h2>
-                <p className="text-sm leading-relaxed mb-3">{project.shortDescription}</p>
-                <Link
-                  to={`/project/${project.slug}`}
-                  className="text-sm text-primary underline hover:text-accent"
-                  style={{ fontFamily: "Arial, sans-serif" }}
-                >
-                  View project →
+        {projects.map((project, i) => (
+            <article
+              key={project.slug}
+              className={`border border-foreground/20 p-5 ${i > 0 ? "mt-6" : ""}`}
+              style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
+            >
+              <div className="grid md:grid-cols-[260px_1fr] gap-5">
+                <Link to={`/project/${project.slug}`} className="block no-underline">
+                  <div
+                    className="w-full aspect-[4/3] border border-foreground/15"
+                    style={{ backgroundColor: project.color }}
+                    title={`${project.title} — placeholder image`}
+                  />
                 </Link>
+                <div className="flex flex-col justify-center">
+                  <h2 className="text-xl mb-1">
+                    <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
+                      {project.title}
+                    </Link>
+                  </h2>
+                  <p className="text-xs text-muted-foreground mb-2 italic">
+                    {project.role} · {project.year}
+                  </p>
+                  <p className="text-sm leading-relaxed mb-3">{project.shortDescription}</p>
+                  <Link
+                    to={`/project/${project.slug}`}
+                    className="text-sm text-primary underline hover:text-accent"
+                  >
+                    View project →
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
