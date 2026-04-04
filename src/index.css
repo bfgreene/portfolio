@@ -52,14 +52,10 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Times New Roman', Times, Georgia, serif;
+    font-family: 'Arial', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     background-color: hsl(60, 20%, 97%);
-    background-image:
-      linear-gradient(hsl(210, 40%, 85%) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(210, 40%, 85%) 1px, transparent 1px);
-    background-size: 20px 20px;
   }
 
   ::selection {
