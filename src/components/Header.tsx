@@ -16,11 +16,10 @@ const Header = () => {
             <Link
               to="/"
               className="text-primary no-underline text-2xl font-bold hover:text-accent"
-              style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
             >
               Benjamin Greene
             </Link>
-            <p className="text-xs text-muted-foreground mt-0.5" style={{ fontFamily: "Arial, sans-serif" }}>
+            <p className="text-xs text-muted-foreground mt-0.5 italic">
               Production Designer &amp; Art Director
             </p>
           </div>
