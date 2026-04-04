@@ -25,21 +25,21 @@ const ProjectDetail = () => {
       <Header />
 
       <main className="max-w-4xl mx-auto px-6">
-        <Link to="/" className="text-sm text-primary hover:text-accent" style={{ fontFamily: "Arial, sans-serif" }}>
+        <Link to="/" className="text-sm text-primary hover:text-accent">
           ← Back to selected work
         </Link>
 
         <section className="mt-6 mb-8">
-          <p className="text-xs text-muted-foreground mb-1" style={{ fontFamily: "Arial, sans-serif" }}>
-            {project.role} — {project.year}
+          <p className="text-xs text-muted-foreground mb-1 italic">
+            {project.role} · {project.year}
           </p>
-          <h1 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h1 className="text-3xl md:text-4xl mb-6">
             {project.title}
           </h1>
 
           {/* Hero image */}
           <div
-            className="w-full aspect-[16/9] border-2 border-foreground mb-8"
+            className="w-full aspect-[16/9] border border-foreground/15 mb-8"
             style={{ backgroundColor: project.color }}
             title={`${project.title} — hero placeholder`}
           />
@@ -52,12 +52,12 @@ const ProjectDetail = () => {
           </div>
 
           {/* Gallery */}
-          <h2 className="text-xl mb-4" style={{ fontFamily: "Arial, sans-serif" }}>Gallery</h2>
+          <h2 className="text-xl mb-4">Gallery</h2>
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
             {project.galleryColors.map((color, i) => (
               <div
                 key={i}
-                className="w-full aspect-[4/3] border-2 border-foreground"
+                className="w-full aspect-[4/3] border border-foreground/15"
                 style={{ backgroundColor: color }}
                 title={`${project.title} — gallery image ${i + 1}`}
               />

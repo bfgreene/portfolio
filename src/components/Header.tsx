@@ -16,15 +16,14 @@ const Header = () => {
             <Link
               to="/"
               className="text-primary no-underline text-2xl font-bold hover:text-accent"
-              style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
             >
               Benjamin Greene
             </Link>
-            <p className="text-xs text-muted-foreground mt-0.5" style={{ fontFamily: "Arial, sans-serif" }}>
+            <p className="text-xs text-muted-foreground mt-0.5 italic">
               Production Designer &amp; Art Director
             </p>
           </div>
-          <nav className="flex gap-4 text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+          <nav className="flex gap-4 text-sm">
             {links.map((link) => (
               <Link
                 key={link.to}
@@ -40,7 +39,7 @@ const Header = () => {
             ))}
           </nav>
         </div>
-        <div className="border-2 border-foreground" />
+        <div className="border-b border-primary/40" />
       </div>
     </header>
   );

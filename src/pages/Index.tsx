@@ -20,42 +20,47 @@ const Index = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Intro */}
         <section className="mb-12">
-          <h1 className="text-3xl md:text-4xl mb-2" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h1 className="text-3xl md:text-4xl mb-2">
             Selected Work
           </h1>
-          <p className="text-muted-foreground text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+          <p className="text-muted-foreground text-sm italic">
             Production design, art direction, and art department work for film, television, and commercials.
           </p>
         </section>
 
         {/* Projects */}
         <section className="mb-16">
-          {projects.map((project, i) => (
-            <article key={project.slug} className={`grid md:grid-cols-[280px_1fr] gap-6 ${i > 0 ? "mt-10 pt-10" : ""}`}>
-              <Link to={`/project/${project.slug}`} className="block no-underline">
-                <div
-                  className="w-full aspect-[4/3] border-2 border-foreground"
-                  style={{ backgroundColor: project.color }}
-                  title={`${project.title} — placeholder image`}
-                />
-              </Link>
-              <div>
-                <p className="text-xs text-muted-foreground mb-1" style={{ fontFamily: "Arial, sans-serif" }}>
-                  {project.role} — {project.year}
-                </p>
-                <h2 className="text-xl mb-2" style={{ fontFamily: "Arial, sans-serif" }}>
-                  <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
-                    {project.title}
-                  </Link>
-                </h2>
-                <p className="text-sm leading-relaxed mb-3">{project.shortDescription}</p>
-                <Link
-                  to={`/project/${project.slug}`}
-                  className="text-sm text-primary underline hover:text-accent"
-                  style={{ fontFamily: "Arial, sans-serif" }}
-                >
-                  View project →
+        {projects.map((project, i) => (
+            <article
+              key={project.slug}
+              className={`border border-foreground/20 p-5 ${i > 0 ? "mt-6" : ""}`}
+              style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
+            >
+              <div className="grid md:grid-cols-[260px_1fr] gap-5">
+                <Link to={`/project/${project.slug}`} className="block no-underline">
+                  <div
+                    className="w-full aspect-[4/3] border border-foreground/15"
+                    style={{ backgroundColor: project.color }}
+                    title={`${project.title} — placeholder image`}
+                  />
                 </Link>
+                <div className="flex flex-col justify-center">
+                  <h2 className="text-xl mb-1">
+                    <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
+                      {project.title}
+                    </Link>
+                  </h2>
+                  <p className="text-xs text-muted-foreground mb-2 italic">
+                    {project.role} · {project.year}
+                  </p>
+                  <p className="text-sm leading-relaxed mb-3">{project.shortDescription}</p>
+                  <Link
+                    to={`/project/${project.slug}`}
+                    className="text-sm text-primary underline hover:text-accent"
+                  >
+                    View project →
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
@@ -63,15 +68,15 @@ const Index = () => {
 
         {/* Misc */}
         <section className="mb-8">
-          <h2 className="text-2xl mb-1" style={{ fontFamily: "Arial, sans-serif" }}>Bits &amp; Pieces</h2>
-          <p className="text-sm text-muted-foreground mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h2 className="text-2xl mb-1">Bits &amp; Pieces</h2>
+          <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {miscPhotos.map((item, i) => (
               <div key={i}>
                 <div
-                  className="w-full aspect-square border-2 border-foreground mb-2"
+                  className="w-full aspect-square border border-foreground/15 mb-2"
                   style={{ backgroundColor: item.color }}
                 />
                 <p className="text-xs text-muted-foreground">{item.caption}</p>

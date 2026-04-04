@@ -20,7 +20,7 @@ const About = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Bio */}
         <section className="mb-12">
-          <h1 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h1 className="text-3xl md:text-4xl mb-6">
             About
           </h1>
           <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
@@ -45,8 +45,8 @@ const About = () => {
 
         {/* Contact */}
         <section className="mb-12">
-          <h2 className="text-xl mb-4" style={{ fontFamily: "Arial, sans-serif" }}>Contact &amp; Links</h2>
-          <ul className="space-y-1 text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h2 className="text-xl mb-4">Contact &amp; Links</h2>
+          <ul className="space-y-1 text-sm">
             <li>
               Email:{" "}
               <a href="mailto:benjamin@example.com">benjamin@example.com</a>
@@ -68,11 +68,11 @@ const About = () => {
 
         {/* CV */}
         <section className="mb-8">
-          <h2 className="text-xl mb-4" style={{ fontFamily: "Arial, sans-serif" }}>C.V.</h2>
-          <div className="border-2 border-foreground">
-            <table className="w-full text-sm" style={{ fontFamily: "Arial, sans-serif" }}>
+          <h2 className="text-xl mb-4">C.V.</h2>
+          <div className="border border-foreground/20">
+            <table className="w-full text-sm">
               <thead>
-                <tr className="border-b-2 border-foreground bg-secondary">
+                <tr className="border-b border-foreground/20 bg-secondary">
                   <th className="text-left py-2 px-3 font-bold">Year</th>
                   <th className="text-left py-2 px-3 font-bold">Project</th>
                   <th className="text-left py-2 px-3 font-bold hidden sm:table-cell">Role</th>
