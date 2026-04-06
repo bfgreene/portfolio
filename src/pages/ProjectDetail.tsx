@@ -56,11 +56,12 @@ const ProjectDetail = () => {
           <h2 className="text-xl mb-4">Gallery</h2>
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
             {project.galleryColors.map((color, i) => (
-              <div
+              <img
                 key={i}
-                className="w-full aspect-[4/3] border border-foreground/15"
+                src="/placeholder.svg"
+                alt={`${project.title} — gallery image ${i + 1}`}
+                className="w-full aspect-[4/3] border border-foreground/15 object-cover"
                 style={{ backgroundColor: color }}
-                title={`${project.title} — gallery image ${i + 1}`}
               />
             ))}
           </div>
