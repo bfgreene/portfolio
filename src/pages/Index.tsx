@@ -36,7 +36,7 @@ const Index = () => {
               <div className="grid md:grid-cols-[260px_1fr] gap-5">
                 <Link to={`/project/${project.slug}`} className="block no-underline">
                   <img
-                    src="/placeholder.svg"
+                    src={project.image || "/placeholder.svg"}
                     alt={`${project.title} — placeholder image`}
                     className="w-full aspect-[4/3] border border-foreground/15 bg-primary object-cover"
                   />
