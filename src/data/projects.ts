@@ -80,7 +80,7 @@ export const projects: ProjectData[] = [
     role: "Prop Master / Set Dresser",
     year: "2025",
     color: "hsl(260, 30%, 60%)",
-    image: "/assets/mitski-main.png",
+    image: "/assets/Mitski-main.png",
     shortDescription:
       "Music video with large-format scenic painting, a 30-foot painted backdrop, and full art department coordination.",
     longDescription: [
