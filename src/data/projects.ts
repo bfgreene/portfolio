@@ -4,6 +4,7 @@ export interface ProjectData {
   role: string;
   year: string;
   color: string;
+  image?: string;
   shortDescription: string;
   longDescription: string[];
   galleryColors: string[];
