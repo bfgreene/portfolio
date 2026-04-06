@@ -35,9 +35,10 @@ const Index = () => {
             >
               <div className="grid md:grid-cols-[260px_1fr] gap-5">
                 <Link to={`/project/${project.slug}`} className="block no-underline">
-                  <div
-                    className="w-full aspect-[4/3] border border-foreground/15 bg-primary"
-                    title={`${project.title} — placeholder image`}
+                  <img
+                    src="/placeholder.svg"
+                    alt={`${project.title} — placeholder image`}
+                    className="w-full aspect-[4/3] border border-foreground/15 bg-primary object-cover"
                   />
                 </Link>
                 <div className="flex flex-col justify-start">
