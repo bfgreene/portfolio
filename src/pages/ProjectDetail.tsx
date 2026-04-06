@@ -33,7 +33,7 @@ const ProjectDetail = () => {
           <p className="text-xs text-muted-foreground mb-1 italic">
             {project.role} · {project.year}
           </p>
-          <h1 className="text-3xl md:text-4xl mb-6">
+          <h1 className="text-3xl md:text-4xl mb-6 text-black">
             {project.title}
           </h1>
 
