@@ -36,7 +36,8 @@ const Header = () => {
           <div>
             <Link
               to="/"
-              className="no-underline text-3xl md:text-4xl font-bold transition-colors duration-150"
+              className="no-underline text-2xl md:text-3xl font-semibold transition-colors duration-150"
+              style={{ color: nameColor || "hsl(240, 100%, 50%)", fontFamily: "'Archivo', sans-serif" }}
               style={{ color: nameColor || "hsl(240, 100%, 50%)" }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
