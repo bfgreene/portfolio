@@ -38,6 +38,7 @@ export const projects: ProjectData[] = [
     role: "Art Director",
     year: "2024",
     color: "hsl(340, 50%, 55%)",
+    image: "/assets/sotw-main.png",
     shortDescription:
       "Short film requiring a complete retro set build on a soundstage. Custom signage fabrication and practical lighting integration.",
     longDescription: [
@@ -58,6 +59,7 @@ export const projects: ProjectData[] = [
     role: "Production Designer",
     year: "2024",
     color: "hsl(150, 25%, 60%)",
+    image: "/assets/wl-main.png",
     shortDescription:
       "Commercial campaign with multiple set builds across three shooting days. Model-making, set dressing, and on-set art direction.",
     longDescription: [
@@ -78,6 +80,7 @@ export const projects: ProjectData[] = [
     role: "Prop Master / Set Dresser",
     year: "2025",
     color: "hsl(260, 30%, 60%)",
+    image: "/assets/mitski-main.png",
     shortDescription:
       "Music video with large-format scenic painting, a 30-foot painted backdrop, and full art department coordination.",
     longDescription: [
@@ -98,6 +101,7 @@ export const projects: ProjectData[] = [
     role: "Set Dresser / Graphics",
     year: "2024",
     color: "hsl(20, 50%, 55%)",
+    image: "/assets/cog-main.png",
     shortDescription:
       "Independent feature film shot across multiple locations. Managed logistics, sourced locations, and coordinated a 12-person art department.",
     longDescription: [
