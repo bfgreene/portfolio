@@ -38,10 +38,11 @@ const ProjectDetail = () => {
           </h1>
 
           {/* Hero image */}
-          <div
-            className="w-full aspect-[16/9] border border-foreground/15 mb-8"
+          <img
+            src="/placeholder.svg"
+            alt={`${project.title} — hero`}
+            className="w-full aspect-[16/9] border border-foreground/15 mb-8 object-cover"
             style={{ backgroundColor: project.color }}
-            title={`${project.title} — hero placeholder`}
           />
 
           {/* Description */}
