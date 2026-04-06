@@ -4,6 +4,7 @@ export interface ProjectData {
   role: string;
   year: string;
   color: string;
+  image?: string;
   shortDescription: string;
   longDescription: string[];
   galleryColors: string[];
@@ -16,6 +17,7 @@ export const projects: ProjectData[] = [
     role: "Art Director",
     year: "2024",
     color: "hsl(35, 40%, 70%)",
+    image: "/assets/toe-main.png",
     shortDescription:
       "Period drama requiring full set construction of a five-room interior with over 200 period-accurate props and custom scenic painting.",
     longDescription: [

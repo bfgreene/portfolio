@@ -39,7 +39,7 @@ const ProjectDetail = () => {
 
           {/* Hero image */}
           <img
-            src="/placeholder.svg"
+            src={project.image || "/placeholder.svg"}
             alt={`${project.title} — hero`}
             className="w-full aspect-[16/9] border border-foreground/15 mb-8 object-cover"
             style={{ backgroundColor: project.color }}
