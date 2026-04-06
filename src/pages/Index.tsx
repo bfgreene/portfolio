@@ -35,9 +35,10 @@ const Index = () => {
             >
               <div className="grid md:grid-cols-[260px_1fr] gap-5">
                 <Link to={`/project/${project.slug}`} className="block no-underline">
-                  <div
-                    className="w-full aspect-[4/3] border border-foreground/15 bg-primary"
-                    title={`${project.title} — placeholder image`}
+                  <img
+                    src="/placeholder.svg"
+                    alt={`${project.title} — placeholder image`}
+                    className="w-full aspect-[4/3] border border-foreground/15 bg-primary object-cover"
                   />
                 </Link>
                 <div className="flex flex-col justify-start">
@@ -71,8 +72,10 @@ const Index = () => {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {miscPhotos.map((item, i) => (
               <div key={i}>
-                <div
-                  className="w-full aspect-square border border-foreground/15 bg-primary mb-2"
+                <img
+                  src="/placeholder.svg"
+                  alt={item.caption}
+                  className="w-full aspect-square border border-foreground/15 bg-primary object-cover mb-2"
                 />
                 <p className="text-xs text-muted-foreground">{item.caption}</p>
               </div>

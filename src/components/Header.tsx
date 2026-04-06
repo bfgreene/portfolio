@@ -36,8 +36,8 @@ const Header = () => {
           <div>
             <Link
               to="/"
-              className="no-underline text-3xl md:text-4xl font-bold transition-colors duration-150"
-              style={{ color: nameColor || "hsl(240, 100%, 50%)" }}
+              className="no-underline text-2xl md:text-3xl font-semibold transition-colors duration-150"
+              style={{ color: nameColor || "hsl(240, 100%, 50%)", fontFamily: "'Archivo', sans-serif" }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -45,6 +45,9 @@ const Header = () => {
             </Link>
             <p className="text-xs text-muted-foreground mt-0.5 italic">
               Production Designer &amp; Art Director
+            </p>
+            <p className="text-xs text-muted-foreground italic">
+              Los Angeles, CA
             </p>
           </div>
           <nav className="flex gap-4 text-sm">
