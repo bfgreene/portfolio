@@ -25,7 +25,7 @@ const About = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Bio */}
         <section className="mb-12">
-          <h1 className="text-2xl md:text-3xl mb-6">
+          <h1 className="text-2xl md:text-3xl mb-6 pb-2 border-b border-primary">
             About
           </h1>
           <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
