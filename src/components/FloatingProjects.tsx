@@ -76,13 +76,8 @@ const FloatingProjects = () => {
           if (s.y + s.h > ch) { s.y = ch - s.h; s.vy = -Math.abs(s.vy); }
         });
 
-        for (let i = 0; i < states.length; i++) {
-          for (let j = i + 1; j < states.length; j++) {
-            if (rectsOverlap(states[i], states[j])) {
-              resolveCollision(states[i], states[j]);
-            }
-          }
-        }
+
+
 
         setPositions(states.map((s) => ({ x: s.x, y: s.y })));
       }
