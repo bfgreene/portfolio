@@ -12,7 +12,7 @@ interface BoxState {
   h: number;
 }
 
-const SPEED = 0.35;
+const SPEED = 0.55;
 
 function randomVelocity() {
   const angle = Math.random() * Math.PI * 2;
@@ -29,6 +29,9 @@ const FloatingProjects = () => {
   const animRef = useRef<number>(0);
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
   const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
+  const [zIndices, setZIndices] = useState<number[]>([]);
+  const overlapTracker = useRef<Record<string, boolean>>({});
+  const zIndicesRef = useRef<number[]>([]);
   const initialized = useRef(false);
 
   const initBoxes = useCallback(() => {
@@ -48,6 +51,9 @@ const FloatingProjects = () => {
       states.push({ x, y, vx, vy, w, h });
     });
     statesRef.current = states;
+    const initialZ = projects.map((_, i) => projects.length - i);
+    zIndicesRef.current = initialZ;
+    setZIndices(initialZ);
     setPositions(states.map((s) => ({ x: s.x, y: s.y })));
     initialized.current = true;
   }, []);
@@ -76,10 +82,31 @@ const FloatingProjects = () => {
           if (s.y + s.h > ch) { s.y = ch - s.h; s.vy = -Math.abs(s.vy); }
         });
 
-
-
+        // Track overlaps and swap z-indices when boxes fully separate after overlapping
+        const n = states.length;
+        const tracker = overlapTracker.current;
+        const zArr = zIndicesRef.current;
+        let zChanged = false;
+        for (let i = 0; i < n; i++) {
+          for (let j = i + 1; j < n; j++) {
+            const a = states[i], b = states[j];
+            const overlapping = a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+            const key = `${i}-${j}`;
+            if (overlapping) {
+              tracker[key] = true;
+            } else if (tracker[key]) {
+              // They just separated — swap z-indices
+              const tmp = zArr[i];
+              zArr[i] = zArr[j];
+              zArr[j] = tmp;
+              tracker[key] = false;
+              zChanged = true;
+            }
+          }
+        }
 
         setPositions(states.map((s) => ({ x: s.x, y: s.y })));
+        if (zChanged) setZIndices([...zArr]);
       }
       animRef.current = requestAnimationFrame(tick);
     };
@@ -108,11 +135,13 @@ const FloatingProjects = () => {
           <div
             key={project.slug}
             ref={(el) => { boxRefs.current[i] = el; }}
-            className="absolute cursor-pointer border border-foreground shadow-md"
+            className="absolute cursor-pointer"
             style={{
               width: "min(440px, 55%)",
               backgroundColor: "hsl(60, 20%, 97%)",
-              zIndex: projects.length - i,
+              border: "2px solid #0000EE",
+              boxShadow: "4px 4px 0px #0000EE",
+              zIndex: zIndices[i] ?? (projects.length - i),
               transform: positions[i]
                 ? `translate(${positions[i].x}px, ${positions[i].y}px)`
                 : "translate(-9999px, -9999px)",
@@ -125,7 +154,7 @@ const FloatingProjects = () => {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full aspect-square border border-foreground/15 bg-primary object-cover"
+                  className="w-full aspect-square bg-primary object-cover"
                 />
                 <div className="flex flex-col justify-start">
                   <h2 className="text-lg mb-0.5 text-foreground no-underline">{project.title}</h2>
