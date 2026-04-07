@@ -135,11 +135,13 @@ const FloatingProjects = () => {
           <div
             key={project.slug}
             ref={(el) => { boxRefs.current[i] = el; }}
-            className="absolute cursor-pointer border border-foreground shadow-md"
+            className="absolute cursor-pointer"
             style={{
               width: "min(440px, 55%)",
               backgroundColor: "hsl(60, 20%, 97%)",
-              zIndex: projects.length - i,
+              border: "2px solid #0000EE",
+              boxShadow: "4px 4px 0px #0000EE",
+              zIndex: zIndices[i] ?? (projects.length - i),
               transform: positions[i]
                 ? `translate(${positions[i].x}px, ${positions[i].y}px)`
                 : "translate(-9999px, -9999px)",
@@ -152,7 +154,7 @@ const FloatingProjects = () => {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full aspect-square border border-foreground/15 bg-primary object-cover"
+                  className="w-full aspect-square bg-primary object-cover"
                 />
                 <div className="flex flex-col justify-start">
                   <h2 className="text-lg mb-0.5 text-foreground no-underline">{project.title}</h2>
