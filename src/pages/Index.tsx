@@ -20,7 +20,7 @@ const Index = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Intro */}
         <section className="mb-4">
-          <h1 className="text-2xl md:text-3xl mb-2">
+          <h1 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-2">
             Select Work
           </h1>
         </section>
@@ -33,15 +33,15 @@ const Index = () => {
               className={`border border-foreground p-5 ${i > 0 ? "mt-6" : ""}`}
               style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
             >
-              <div className="grid md:grid-cols-[300px_1fr] gap-5">
-                <Link to={`/project/${project.slug}`} className="block no-underline">
+              <div className={`grid md:grid-cols-[300px_1fr] gap-5 ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}>
+                <Link to={`/project/${project.slug}`} className="block no-underline" style={{ direction: "ltr" }}>
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={`${project.title} — placeholder image`}
                     className="w-full aspect-[4/3] border border-foreground/15 bg-primary object-cover"
                   />
                 </Link>
-                <div className="flex flex-col justify-start">
+                <div className="flex flex-col justify-start" style={{ direction: "ltr" }}>
                   <h2 className="text-xl mb-1">
                     <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
                       {project.title}
@@ -65,7 +65,7 @@ const Index = () => {
 
         {/* Misc */}
         <section className="mb-8">
-          <h2 className="text-2xl md:text-3xl mb-1">Misc.</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-1">Misc.</h2>
           <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>

@@ -25,7 +25,7 @@ const About = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Bio */}
         <section className="mb-12">
-          <h1 className="text-2xl md:text-3xl mb-6">
+          <h1 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-6">
             About
           </h1>
           <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
@@ -50,7 +50,7 @@ const About = () => {
 
         {/* Contact */}
         <section className="mb-12">
-          <h2 className="text-xl mb-4">Contact &amp; Links</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">Contact &amp; Links</h2>
           <ul className="space-y-1 text-sm">
             <li>
               Email:{" "}
@@ -73,7 +73,7 @@ const About = () => {
 
         {/* CV */}
         <section className="mb-8">
-          <h2 className="text-xl mb-4">C.V.</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">C.V.</h2>
           <ul className="space-y-1.5 text-sm list-none p-0">
             {cvEntries.map((entry, i) => (
               <li key={i}>
