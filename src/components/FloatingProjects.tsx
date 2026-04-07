@@ -42,15 +42,8 @@ const FloatingProjects = () => {
       if (!el) return;
       const w = el.offsetWidth;
       const h = el.offsetHeight;
-      let x: number, y: number, attempts = 0;
-      do {
-        x = Math.random() * Math.max(0, cw - w);
-        y = Math.random() * Math.max(0, ch - h);
-        attempts++;
-      } while (
-        attempts < 50 &&
-        states.some((s) => rectsOverlap({ x, y, w, h, vx: 0, vy: 0 }, s))
-      );
+      let x = Math.random() * Math.max(0, cw - w);
+      let y = Math.random() * Math.max(0, ch - h);
       const { vx, vy } = randomVelocity();
       states.push({ x, y, vx, vy, w, h });
     });
