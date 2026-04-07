@@ -95,10 +95,9 @@ const FloatingProjects = () => {
             if (overlapping) {
               tracker[key] = true;
             } else if (tracker[key]) {
-              // They just separated — swap z-indices
-              const tmp = zArr[i];
-              zArr[i] = zArr[j];
-              zArr[j] = tmp;
+              // They just separated — randomize the z-index of the separating box
+              zArr[i] = Math.floor(Math.random() * n * 10);
+              zArr[j] = Math.floor(Math.random() * n * 10);
               tracker[key] = false;
               zChanged = true;
             }
@@ -140,7 +139,7 @@ const FloatingProjects = () => {
               width: "min(440px, 55%)",
               backgroundColor: "hsl(60, 20%, 97%)",
               border: "2px solid #0000EE",
-              boxShadow: "4px 4px 0px #0000EE",
+              boxShadow: "6px 6px 0px #0000EE",
               zIndex: zIndices[i] ?? (projects.length - i),
               transform: positions[i]
                 ? `translate(${positions[i].x}px, ${positions[i].y}px)`
@@ -157,7 +156,7 @@ const FloatingProjects = () => {
                   className="w-full aspect-square bg-primary object-cover"
                 />
                 <div className="flex flex-col justify-start">
-                  <h2 className="text-lg mb-0.5 text-foreground no-underline">{project.title}</h2>
+                  <h2 className="text-lg mb-0.5 no-underline" style={{ color: "#0000EE" }}>{project.title}</h2>
                   <p className="text-xs text-muted-foreground mb-1.5 italic">
                     {project.role} · {project.year}
                   </p>
