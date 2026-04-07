@@ -44,11 +44,11 @@ const Header = () => {
               Benjamin Greene
             </Link>
             <p className="text-xs text-muted-foreground mt-0.5 italic">
-              Production Designer &amp; Art Director
+              Production Designer &amp; Art Director &middot; Los Angeles, CA
             </p>
-            <p className="text-xs text-muted-foreground italic">
+            {/* <p className="text-xs text-muted-foreground italic">
               Los Angeles, CA
-            </p>
+            </p> */}
           </div>
           <nav className="flex gap-4 text-sm">
             {links.map((link) => (
