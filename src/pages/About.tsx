@@ -73,7 +73,7 @@ const About = () => {
 
         {/* CV */}
         <section className="mb-8">
-          <h2 className="text-xl mb-4">C.V.</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">C.V.</h2>
           <ul className="space-y-1.5 text-sm list-none p-0">
             {cvEntries.map((entry, i) => (
               <li key={i}>
