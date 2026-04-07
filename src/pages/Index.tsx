@@ -20,7 +20,7 @@ const Index = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Intro */}
         <section className="mb-4">
-          <h1 className="text-2xl md:text-3xl mb-2 pb-2 border-b border-primary">
+          <h1 className="text-2xl md:text-3xl mb-2">
             Select Work
           </h1>
         </section>
@@ -30,7 +30,8 @@ const Index = () => {
         {projects.map((project, i) => (
             <article
               key={project.slug}
-              className={`${i > 0 ? "mt-8" : ""}`}
+              className={`border-2 border-foreground p-5 ${i > 0 ? "mt-6" : ""}`}
+              style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
             >
               <div className="grid md:grid-cols-[260px_1fr] gap-5">
                 <Link to={`/project/${project.slug}`} className="block no-underline">
@@ -64,7 +65,7 @@ const Index = () => {
 
         {/* Misc */}
         <section className="mb-8">
-          <h2 className="text-2xl md:text-3xl mb-1 pb-2 border-b border-primary">Misc.</h2>
+          <h2 className="text-2xl md:text-3xl mb-1">Misc.</h2>
           <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>
