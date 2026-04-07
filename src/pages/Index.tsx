@@ -43,14 +43,14 @@ const Index = () => {
                 </Link>
                 <div className="flex flex-col justify-start">
                   <h2 className="text-xl mb-1">
-                    <Link to={`/project/${project.slug}`} className="text-black no-underline hover:text-primary">
+                    <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
                       {project.title}
                     </Link>
                   </h2>
                   <p className="text-xs text-muted-foreground mb-2 italic">
                     {project.role} · {project.year}
                   </p>
-                  <p className="text-sm leading-relaxed mb-3 text-black">{project.shortDescription}</p>
+                  <p className="text-sm leading-relaxed mb-3">{project.shortDescription}</p>
                   <Link
                     to={`/project/${project.slug}`}
                     className="text-sm text-primary underline hover:text-accent"

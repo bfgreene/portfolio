@@ -33,7 +33,7 @@ const ProjectDetail = () => {
           <p className="text-xs text-muted-foreground mb-1 italic">
             {project.role} · {project.year}
           </p>
-          <h1 className="text-3xl md:text-4xl mb-6 text-black">
+          <h1 className="text-3xl md:text-4xl mb-6">
             {project.title}
           </h1>
 
@@ -48,7 +48,7 @@ const ProjectDetail = () => {
           {/* Description */}
           <div className="max-w-2xl space-y-4 mb-10">
             {project.longDescription.map((para, i) => (
-              <p key={i} className="text-sm leading-relaxed text-black">{para}</p>
+              <p key={i} className="text-sm leading-relaxed">{para}</p>
             ))}
           </div>
 
