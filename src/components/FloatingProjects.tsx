@@ -29,6 +29,9 @@ const FloatingProjects = () => {
   const animRef = useRef<number>(0);
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
   const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
+  const [zIndices, setZIndices] = useState<number[]>([]);
+  const overlapTracker = useRef<Record<string, boolean>>({});
+  const zIndicesRef = useRef<number[]>([]);
   const initialized = useRef(false);
 
   const initBoxes = useCallback(() => {
