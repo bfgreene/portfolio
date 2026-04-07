@@ -30,8 +30,7 @@ const Index = () => {
         {projects.map((project, i) => (
             <article
               key={project.slug}
-              className={`border-2 border-foreground p-5 ${i > 0 ? "mt-6" : ""}`}
-              style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
+              className={`${i > 0 ? "mt-8" : ""}`}
             >
               <div className="grid md:grid-cols-[260px_1fr] gap-5">
                 <Link to={`/project/${project.slug}`} className="block no-underline">
