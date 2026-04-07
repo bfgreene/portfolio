@@ -82,24 +82,51 @@ const FloatingProjects = () => {
           if (s.y + s.h > ch) { s.y = ch - s.h; s.vy = -Math.abs(s.vy); }
         });
 
-        // Track overlaps and swap z-indices when boxes fully separate after overlapping
+        // Track overlaps and randomize z-index only when a box is fully isolated
         const n = states.length;
         const tracker = overlapTracker.current;
         const zArr = zIndicesRef.current;
         let zChanged = false;
+
+        // Compute current overlap state for all pairs
+        const currentOverlap: Record<string, boolean> = {};
         for (let i = 0; i < n; i++) {
           for (let j = i + 1; j < n; j++) {
             const a = states[i], b = states[j];
-            const overlapping = a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+            currentOverlap[`${i}-${j}`] = a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+          }
+        }
+
+        // Check if a box is overlapping any other box right now
+        const isOverlappingAny = (idx: number) => {
+          for (let k = 0; k < n; k++) {
+            if (k === idx) continue;
+            const key = idx < k ? `${idx}-${k}` : `${k}-${idx}`;
+            if (currentOverlap[key]) return true;
+          }
+          return false;
+        };
+
+        // For each pair: update tracker and randomize z when fully isolated
+        for (let i = 0; i < n; i++) {
+          for (let j = i + 1; j < n; j++) {
             const key = `${i}-${j}`;
-            if (overlapping) {
-              tracker[key] = true;
+            if (currentOverlap[key]) {
+              tracker[key] = true; // mark as having overlapped
             } else if (tracker[key]) {
-              // They just separated — randomize the z-index of the separating box
-              zArr[i] = Math.floor(Math.random() * n * 10);
-              zArr[j] = Math.floor(Math.random() * n * 10);
-              tracker[key] = false;
-              zChanged = true;
+              // Just separated — randomize z only if the box is not overlapping anything else
+              if (!isOverlappingAny(i)) {
+                zArr[i] = Math.floor(Math.random() * n * 10);
+                zChanged = true;
+              }
+              if (!isOverlappingAny(j)) {
+                zArr[j] = Math.floor(Math.random() * n * 10);
+                zChanged = true;
+              }
+              // Only clear tracker if both are fully isolated
+              if (!isOverlappingAny(i) && !isOverlappingAny(j)) {
+                tracker[key] = false;
+              }
             }
           }
         }
