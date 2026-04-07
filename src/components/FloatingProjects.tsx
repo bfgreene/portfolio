@@ -51,6 +51,9 @@ const FloatingProjects = () => {
       states.push({ x, y, vx, vy, w, h });
     });
     statesRef.current = states;
+    const initialZ = projects.map((_, i) => projects.length - i);
+    zIndicesRef.current = initialZ;
+    setZIndices(initialZ);
     setPositions(states.map((s) => ({ x: s.x, y: s.y })));
     initialized.current = true;
   }, []);
