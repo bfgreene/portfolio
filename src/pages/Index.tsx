@@ -20,7 +20,7 @@ const Index = () => {
       <main className="max-w-4xl mx-auto px-6">
         {/* Intro */}
         <section className="mb-4">
-          <h1 className="text-2xl md:text-3xl mb-2">
+          <h1 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-2">
             Select Work
           </h1>
         </section>
