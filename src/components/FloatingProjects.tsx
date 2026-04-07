@@ -12,33 +12,14 @@ interface BoxState {
   h: number;
 }
 
-const SPEED = 0.4;
+const SPEED = 0.35;
 
 function randomVelocity() {
   const angle = Math.random() * Math.PI * 2;
   return { vx: Math.cos(angle) * SPEED, vy: Math.sin(angle) * SPEED };
 }
 
-function rectsOverlap(a: BoxState, b: BoxState) {
-  return !(a.x + a.w < b.x || b.x + b.w < a.x || a.y + a.h < b.y || b.y + b.h < a.y);
-}
-
-function resolveCollision(a: BoxState, b: BoxState) {
-  const acx = a.x + a.w / 2, acy = a.y + a.h / 2;
-  const bcx = b.x + b.w / 2, bcy = b.y + b.h / 2;
-  const dx = acx - bcx, dy = acy - bcy;
-  if (Math.abs(dx) > Math.abs(dy)) {
-    a.vx = Math.abs(a.vx) * Math.sign(dx);
-    b.vx = -Math.abs(b.vx) * Math.sign(dx);
-  } else {
-    a.vy = Math.abs(a.vy) * Math.sign(dy);
-    b.vy = -Math.abs(b.vy) * Math.sign(dy);
-  }
-  // push apart
-  const overlap = 2;
-  a.x += Math.sign(dx) * overlap;
-  a.y += Math.sign(dy) * overlap;
-}
+// No collision needed — boxes pass over each other
 
 const FloatingProjects = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -61,15 +42,8 @@ const FloatingProjects = () => {
       if (!el) return;
       const w = el.offsetWidth;
       const h = el.offsetHeight;
-      let x: number, y: number, attempts = 0;
-      do {
-        x = Math.random() * Math.max(0, cw - w);
-        y = Math.random() * Math.max(0, ch - h);
-        attempts++;
-      } while (
-        attempts < 50 &&
-        states.some((s) => rectsOverlap({ x, y, w, h, vx: 0, vy: 0 }, s))
-      );
+      let x = Math.random() * Math.max(0, cw - w);
+      let y = Math.random() * Math.max(0, ch - h);
       const { vx, vy } = randomVelocity();
       states.push({ x, y, vx, vy, w, h });
     });
@@ -102,13 +76,8 @@ const FloatingProjects = () => {
           if (s.y + s.h > ch) { s.y = ch - s.h; s.vy = -Math.abs(s.vy); }
         });
 
-        for (let i = 0; i < states.length; i++) {
-          for (let j = i + 1; j < states.length; j++) {
-            if (rectsOverlap(states[i], states[j])) {
-              resolveCollision(states[i], states[j]);
-            }
-          }
-        }
+
+
 
         setPositions(states.map((s) => ({ x: s.x, y: s.y })));
       }
@@ -133,16 +102,17 @@ const FloatingProjects = () => {
       <div
         ref={containerRef}
         className="relative w-full overflow-hidden"
-        style={{ height: "700px" }}
+        style={{ height: "800px" }}
       >
         {projects.map((project, i) => (
           <div
             key={project.slug}
             ref={(el) => { boxRefs.current[i] = el; }}
-            className="absolute cursor-pointer border border-foreground"
+            className="absolute cursor-pointer border border-foreground shadow-md"
             style={{
-              width: "min(540px, 62%)",
+              width: "min(440px, 55%)",
               backgroundColor: "hsl(60, 20%, 97%)",
+              zIndex: projects.length - i,
               transform: positions[i]
                 ? `translate(${positions[i].x}px, ${positions[i].y}px)`
                 : "translate(-9999px, -9999px)",
@@ -155,7 +125,7 @@ const FloatingProjects = () => {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full aspect-[4/3] border border-foreground/15 bg-primary object-cover"
+                  className="w-full aspect-square border border-foreground/15 bg-primary object-cover"
                 />
                 <div className="flex flex-col justify-start">
                   <h2 className="text-lg mb-0.5 text-foreground no-underline">{project.title}</h2>
