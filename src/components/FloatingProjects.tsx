@@ -156,7 +156,7 @@ const FloatingProjects = () => {
                   className="w-full aspect-square bg-primary object-cover"
                 />
                 <div className="flex flex-col justify-start">
-                  <h2 className="text-lg mb-0.5 text-foreground no-underline">{project.title}</h2>
+                  <h2 className="text-lg mb-0.5 no-underline" style={{ color: "#0000EE" }}>{project.title}</h2>
                   <p className="text-xs text-muted-foreground mb-1.5 italic">
                     {project.role} · {project.year}
                   </p>
