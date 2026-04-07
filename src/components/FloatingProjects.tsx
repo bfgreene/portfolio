@@ -82,10 +82,31 @@ const FloatingProjects = () => {
           if (s.y + s.h > ch) { s.y = ch - s.h; s.vy = -Math.abs(s.vy); }
         });
 
-
-
+        // Track overlaps and swap z-indices when boxes fully separate after overlapping
+        const n = states.length;
+        const tracker = overlapTracker.current;
+        const zArr = zIndicesRef.current;
+        let zChanged = false;
+        for (let i = 0; i < n; i++) {
+          for (let j = i + 1; j < n; j++) {
+            const a = states[i], b = states[j];
+            const overlapping = a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+            const key = `${i}-${j}`;
+            if (overlapping) {
+              tracker[key] = true;
+            } else if (tracker[key]) {
+              // They just separated — swap z-indices
+              const tmp = zArr[i];
+              zArr[i] = zArr[j];
+              zArr[j] = tmp;
+              tracker[key] = false;
+              zChanged = true;
+            }
+          }
+        }
 
         setPositions(states.map((s) => ({ x: s.x, y: s.y })));
+        if (zChanged) setZIndices([...zArr]);
       }
       animRef.current = requestAnimationFrame(tick);
     };
