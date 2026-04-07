@@ -50,7 +50,7 @@ const About = () => {
 
         {/* Contact */}
         <section className="mb-12">
-          <h2 className="text-xl mb-4">Contact &amp; Links</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">Contact &amp; Links</h2>
           <ul className="space-y-1 text-sm">
             <li>
               Email:{" "}
