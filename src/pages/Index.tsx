@@ -21,7 +21,7 @@ const Index = () => {
         {/* Intro */}
         <section className="mb-4">
           <h1 className="text-2xl md:text-3xl mb-2">
-            Selected Work
+            Select Work
           </h1>
         </section>
 
