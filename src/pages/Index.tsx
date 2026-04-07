@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { projects } from "@/data/projects";
+import FloatingProjects from "@/components/FloatingProjects";
 
 const miscPhotos = [
   { color: "hsl(45, 30%, 75%)", caption: "Floor plan sketches for a short film set build." },
@@ -25,47 +24,14 @@ const Index = () => {
           </h1>
         </section>
 
-        {/* Projects */}
+        {/* Floating Projects */}
         <section className="mb-16">
-        {projects.map((project, i) => (
-            <article
-              key={project.slug}
-              className={`border border-foreground p-5 ${i > 0 ? "mt-6" : ""}`}
-              style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
-            >
-              <div className={`grid md:grid-cols-[300px_1fr] gap-5 ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}>
-                <Link to={`/project/${project.slug}`} className="block no-underline" style={{ direction: "ltr" }}>
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={`${project.title} — placeholder image`}
-                    className="w-full aspect-[4/3] border border-foreground/15 bg-primary object-cover"
-                  />
-                </Link>
-                <div className="flex flex-col justify-start" style={{ direction: "ltr" }}>
-                  <h2 className="text-xl mb-1">
-                    <Link to={`/project/${project.slug}`} className="text-foreground no-underline hover:text-primary">
-                      {project.title}
-                    </Link>
-                  </h2>
-                  <p className="text-xs text-muted-foreground mb-2 italic">
-                    {project.role} · {project.year}
-                  </p>
-                  <p className="text-sm leading-relaxed mb-3">{project.shortDescription}</p>
-                  <Link
-                    to={`/project/${project.slug}`}
-                    className="text-sm text-primary underline hover:text-accent"
-                  >
-                    View project →
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
+          <FloatingProjects />
         </section>
 
         {/* Misc */}
         <section className="mb-8">
-          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-1">Misc.</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-1">Miscellaneous</h2>
           <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>
