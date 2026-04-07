@@ -19,26 +19,7 @@ function randomVelocity() {
   return { vx: Math.cos(angle) * SPEED, vy: Math.sin(angle) * SPEED };
 }
 
-function rectsOverlap(a: BoxState, b: BoxState) {
-  return !(a.x + a.w < b.x || b.x + b.w < a.x || a.y + a.h < b.y || b.y + b.h < a.y);
-}
-
-function resolveCollision(a: BoxState, b: BoxState) {
-  const acx = a.x + a.w / 2, acy = a.y + a.h / 2;
-  const bcx = b.x + b.w / 2, bcy = b.y + b.h / 2;
-  const dx = acx - bcx, dy = acy - bcy;
-  if (Math.abs(dx) > Math.abs(dy)) {
-    a.vx = Math.abs(a.vx) * Math.sign(dx);
-    b.vx = -Math.abs(b.vx) * Math.sign(dx);
-  } else {
-    a.vy = Math.abs(a.vy) * Math.sign(dy);
-    b.vy = -Math.abs(b.vy) * Math.sign(dy);
-  }
-  // push apart
-  const overlap = 2;
-  a.x += Math.sign(dx) * overlap;
-  a.y += Math.sign(dy) * overlap;
-}
+// No collision needed — boxes pass over each other
 
 const FloatingProjects = () => {
   const containerRef = useRef<HTMLDivElement>(null);
