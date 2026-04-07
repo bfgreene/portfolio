@@ -95,10 +95,9 @@ const FloatingProjects = () => {
             if (overlapping) {
               tracker[key] = true;
             } else if (tracker[key]) {
-              // They just separated — swap z-indices
-              const tmp = zArr[i];
-              zArr[i] = zArr[j];
-              zArr[j] = tmp;
+              // They just separated — randomize the z-index of the separating box
+              zArr[i] = Math.floor(Math.random() * n * 10);
+              zArr[j] = Math.floor(Math.random() * n * 10);
               tracker[key] = false;
               zChanged = true;
             }
