@@ -108,10 +108,11 @@ const FloatingProjects = () => {
           <div
             key={project.slug}
             ref={(el) => { boxRefs.current[i] = el; }}
-            className="absolute cursor-pointer border border-foreground"
+            className="absolute cursor-pointer border border-foreground shadow-md"
             style={{
-              width: "min(540px, 62%)",
+              width: "min(440px, 55%)",
               backgroundColor: "hsl(60, 20%, 97%)",
+              zIndex: projects.length - i,
               transform: positions[i]
                 ? `translate(${positions[i].x}px, ${positions[i].y}px)`
                 : "translate(-9999px, -9999px)",
