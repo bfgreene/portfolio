@@ -87,6 +87,7 @@ const FloatingProjects = () => {
         const tracker = overlapTracker.current;
         const zArr = zIndicesRef.current;
         let zChanged = false;
+        // First pass: detect current overlaps
         for (let i = 0; i < n; i++) {
           for (let j = i + 1; j < n; j++) {
             const a = states[i], b = states[j];
@@ -95,12 +96,55 @@ const FloatingProjects = () => {
             if (overlapping) {
               tracker[key] = true;
             } else if (tracker[key]) {
-              // They just separated — randomize the z-index of the separating box
-              zArr[i] = Math.floor(Math.random() * n * 10);
-              zArr[j] = Math.floor(Math.random() * n * 10);
               tracker[key] = false;
-              zChanged = true;
             }
+          }
+        }
+
+        // Second pass: only randomize z for boxes that have NO current overlaps
+        const pendingRandomize = new Set<number>();
+        for (let i = 0; i < n; i++) {
+          for (let j = i + 1; j < n; j++) {
+            const key = `${i}-${j}`;
+            // Just separated (tracker was cleared above)
+            if (!tracker[key]) {
+              // Check if key was true last frame — use a separate "was overlapping" tracker
+            }
+          }
+        }
+
+        // Simplified: track "just separated" pairs and check isolation
+        const justSeparated: [number, number][] = [];
+        for (let i = 0; i < n; i++) {
+          for (let j = i + 1; j < n; j++) {
+            const a = states[i], b = states[j];
+            const overlapping = a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+            const key = `${i}-${j}`;
+            if (!overlapping && tracker[key] === false) {
+              // was overlapping, now separated — mark for potential z randomization
+              justSeparated.push([i, j]);
+            }
+          }
+        }
+
+        // For each box in a just-separated pair, check it's not overlapping ANY other box
+        const isOverlappingAny = (idx: number) => {
+          for (let k = 0; k < n; k++) {
+            if (k === idx) continue;
+            const a = states[idx], b = states[k];
+            if (a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y) return true;
+          }
+          return false;
+        };
+
+        for (const [i, j] of justSeparated) {
+          if (!isOverlappingAny(i)) {
+            zArr[i] = Math.floor(Math.random() * n * 10);
+            zChanged = true;
+          }
+          if (!isOverlappingAny(j)) {
+            zArr[j] = Math.floor(Math.random() * n * 10);
+            zChanged = true;
           }
         }
 
