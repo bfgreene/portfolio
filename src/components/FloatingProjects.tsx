@@ -102,7 +102,7 @@ const FloatingProjects = () => {
       <div
         ref={containerRef}
         className="relative w-full overflow-hidden"
-        style={{ height: "700px" }}
+        style={{ height: "800px" }}
       >
         {projects.map((project, i) => (
           <div
