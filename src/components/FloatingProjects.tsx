@@ -139,7 +139,7 @@ const FloatingProjects = () => {
               width: "min(440px, 55%)",
               backgroundColor: "hsl(60, 20%, 97%)",
               border: "2px solid #0000EE",
-              boxShadow: "4px 4px 0px #0000EE",
+              boxShadow: "6px 6px 0px #0000EE",
               zIndex: zIndices[i] ?? (projects.length - i),
               transform: positions[i]
                 ? `translate(${positions[i].x}px, ${positions[i].y}px)`
