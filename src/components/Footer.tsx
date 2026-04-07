@@ -1,7 +1,7 @@
 const Footer = () => (
   <footer className="border-t-2 border-foreground mt-12 py-6 px-6">
     <div className="max-w-4xl mx-auto text-sm text-muted-foreground" style={{ fontFamily: "Arial, sans-serif" }}>
-      <p>© {new Date().getFullYear()} Benjamin Greene — Production Designer / Art Director</p>
+      <p>© {new Date().getFullYear()} Benjamin Greene</p>
     </div>
   </footer>
 );
