@@ -125,7 +125,7 @@ const FloatingProjects = () => {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full aspect-[4/3] border border-foreground/15 bg-primary object-cover"
+                  className="w-full aspect-square border border-foreground/15 bg-primary object-cover"
                 />
                 <div className="flex flex-col justify-start">
                   <h2 className="text-lg mb-0.5 text-foreground no-underline">{project.title}</h2>
