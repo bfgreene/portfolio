@@ -69,27 +69,23 @@ const Index = () => {
           onClick={() => setSelectedMisc(null)}
         >
           <div
-            className="relative max-w-lg w-[90vw]"
+            className="relative border border-foreground max-w-lg w-[90vw] p-5"
+            style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setSelectedMisc(null)}
-              className="absolute -top-10 right-0 p-1 hover:opacity-70"
+              className="absolute top-3 right-3 p-1 hover:opacity-70"
               aria-label="Close"
             >
-              <X className="h-5 w-5 text-white" />
+              <X className="h-5 w-5 text-foreground" />
             </button>
-            <div
-              className="border border-foreground p-5"
-              style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
-            >
-              <img
-                src={selectedMisc.src}
-                alt={selectedMisc.caption}
-                className="w-full aspect-square object-cover border border-foreground/15 mb-4"
-              />
-              <p className="text-sm text-muted-foreground">{selectedMisc.caption}</p>
-            </div>
+            <img
+              src={selectedMisc.src}
+              alt={selectedMisc.caption}
+              className="w-full aspect-square object-cover border border-foreground/15 mb-4"
+            />
+            <p className="text-sm text-muted-foreground">{selectedMisc.caption}</p>
           </div>
         </div>
       )}
