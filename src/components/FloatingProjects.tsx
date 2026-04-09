@@ -154,10 +154,10 @@ const FloatingProjects = () => {
             ref={(el) => { boxRefs.current[i] = el; }}
             className="absolute cursor-pointer"
             style={{
-              width: "min(360px, 50%)",
+              width: "min(300px, 45%)",
               backgroundColor: "hsl(60, 20%, 97%)",
               border: "2px solid #0000EE",
-              boxShadow: "6px 6px 12px rgba(0, 0, 238, 0.45), 8px 8px 24px rgba(0, 0, 238, 0.2), 10px 10px 40px rgba(0, 0, 238, 0.08)",
+              boxShadow: "4px 4px 0px #0000EE",
               zIndex: zIndices[i] ?? (projects.length - i),
               transform: positions[i]
                 ? `translate(${positions[i].x}px, ${positions[i].y}px)`
