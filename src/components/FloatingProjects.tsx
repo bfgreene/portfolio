@@ -12,14 +12,12 @@ interface BoxState {
   h: number;
 }
 
-const SPEED = .7;
+const SPEED = 0.7;
 
 function randomVelocity() {
   const angle = Math.random() * Math.PI * 2;
   return { vx: Math.cos(angle) * SPEED, vy: Math.sin(angle) * SPEED };
 }
-
-// No collision needed — boxes pass over each other
 
 const FloatingProjects = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -41,12 +39,12 @@ const FloatingProjects = () => {
     const ch = container.clientHeight;
 
     const states: BoxState[] = [];
-    boxRefs.current.forEach((el, i) => {
+    boxRefs.current.forEach((el) => {
       if (!el) return;
       const w = el.offsetWidth;
       const h = el.offsetHeight;
-      let x = Math.random() * Math.max(0, cw - w);
-      let y = Math.random() * Math.max(0, ch - h);
+      const x = Math.random() * Math.max(0, cw - w);
+      const y = Math.random() * Math.max(0, ch - h);
       const { vx, vy } = randomVelocity();
       states.push({ x, y, vx, vy, w, h });
     });
@@ -59,7 +57,6 @@ const FloatingProjects = () => {
   }, []);
 
   useEffect(() => {
-    // Wait for refs to be set
     const timer = setTimeout(initBoxes, 100);
     return () => clearTimeout(timer);
   }, [initBoxes]);
@@ -82,13 +79,11 @@ const FloatingProjects = () => {
           if (s.y + s.h > ch) { s.y = ch - s.h; s.vy = -Math.abs(s.vy); }
         });
 
-        // Track overlaps and randomize z-index only when a box is fully isolated
         const n = states.length;
         const tracker = overlapTracker.current;
         const zArr = zIndicesRef.current;
         let zChanged = false;
 
-        // Compute current overlap state for all pairs
         const currentOverlap: Record<string, boolean> = {};
         for (let i = 0; i < n; i++) {
           for (let j = i + 1; j < n; j++) {
@@ -97,7 +92,6 @@ const FloatingProjects = () => {
           }
         }
 
-        // Check if a box is overlapping any other box right now
         const isOverlappingAny = (idx: number) => {
           for (let k = 0; k < n; k++) {
             if (k === idx) continue;
@@ -107,14 +101,12 @@ const FloatingProjects = () => {
           return false;
         };
 
-        // For each pair: update tracker and randomize z when fully isolated
         for (let i = 0; i < n; i++) {
           for (let j = i + 1; j < n; j++) {
             const key = `${i}-${j}`;
             if (currentOverlap[key]) {
-              tracker[key] = true; // mark as having overlapped
+              tracker[key] = true;
             } else if (tracker[key]) {
-              // Just separated — randomize z only if the box is not overlapping anything else
               if (!isOverlappingAny(i)) {
                 zArr[i] = Math.floor(Math.random() * n * 10);
                 zChanged = true;
@@ -123,7 +115,6 @@ const FloatingProjects = () => {
                 zArr[j] = Math.floor(Math.random() * n * 10);
                 zChanged = true;
               }
-              // Only clear tracker if both are fully isolated
               if (!isOverlappingAny(i) && !isOverlappingAny(j)) {
                 tracker[key] = false;
               }
@@ -163,10 +154,10 @@ const FloatingProjects = () => {
             ref={(el) => { boxRefs.current[i] = el; }}
             className="absolute cursor-pointer"
             style={{
-              width: "min(440px, 55%)",
+              width: "min(360px, 50%)",
               backgroundColor: "hsl(60, 20%, 97%)",
               border: "2px solid #0000EE",
-              boxShadow: "6px 6px 0px #0000EE",
+              boxShadow: "6px 6px 12px rgba(0, 0, 238, 0.45), 8px 8px 24px rgba(0, 0, 238, 0.2), 10px 10px 40px rgba(0, 0, 238, 0.08)",
               zIndex: zIndices[i] ?? (projects.length - i),
               transform: positions[i]
                 ? `translate(${positions[i].x}px, ${positions[i].y}px)`
@@ -175,27 +166,23 @@ const FloatingProjects = () => {
             }}
             onClick={() => handleSelect(project)}
           >
-            <div className="p-4">
-              <div className={`grid grid-cols-[140px_1fr] sm:grid-cols-[180px_1fr] gap-4`}>
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full aspect-square bg-primary object-cover"
-                />
-                <div className="flex flex-col justify-start">
-                  <h2 className="text-lg mb-0.5 no-underline" style={{ color: "#0000EE" }}>{project.title}</h2>
-                  <p className="text-xs text-muted-foreground mb-1.5 italic">
-                    {project.role} · {project.year}
-                  </p>
-                  <p className="text-sm leading-relaxed">{project.shortDescription}</p>
-                </div>
-              </div>
+            <div className="p-3">
+              <img
+                src={project.image || "/placeholder.svg"}
+                alt={project.title}
+                className="w-full aspect-[4/3] object-cover mb-3"
+              />
+              <h2 className="text-xl font-semibold mb-1" style={{ color: "#0000EE" }}>
+                {project.title}
+              </h2>
+              <p className="text-sm text-muted-foreground italic">
+                {project.role} · {project.year}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Detail popup overlay */}
       {selectedProject && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center"
@@ -234,13 +221,13 @@ const FloatingProjects = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-4">
-              {selectedProject.galleryColors.map((color, i) => (
+              {selectedProject.photos.slice(1).map((photo, i) => (
                 <img
                   key={i}
-                  src="/placeholder.svg"
-                  alt={`${selectedProject.title} gallery ${i + 1}`}
+                  src={photo}
+                  alt={`${selectedProject.title} gallery ${i + 2}`}
                   className="w-full aspect-[4/3] border border-foreground/15 object-cover"
-                  style={{ backgroundColor: color }}
+                  style={{ backgroundColor: selectedProject.color }}
                 />
               ))}
             </div>

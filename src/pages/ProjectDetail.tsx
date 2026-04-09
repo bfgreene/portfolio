@@ -37,7 +37,6 @@ const ProjectDetail = () => {
             {project.title}
           </h1>
 
-          {/* Hero image */}
           <img
             src={project.image || "/placeholder.svg"}
             alt={`${project.title} — hero`}
@@ -45,23 +44,21 @@ const ProjectDetail = () => {
             style={{ backgroundColor: project.color }}
           />
 
-          {/* Description */}
           <div className="max-w-2xl space-y-4 mb-10">
             {project.longDescription.map((para, i) => (
               <p key={i} className="text-sm leading-relaxed">{para}</p>
             ))}
           </div>
 
-          {/* Gallery */}
           <h2 className="text-xl mb-4">Gallery</h2>
           <div className="grid sm:grid-cols-2 gap-6 mb-8">
-            {project.galleryColors.map((color, i) => (
+            {project.photos.slice(1).map((photo, i) => (
               <img
                 key={i}
-                src="/placeholder.svg"
-                alt={`${project.title} — gallery image ${i + 1}`}
+                src={photo}
+                alt={`${project.title} — gallery image ${i + 2}`}
                 className="w-full aspect-[4/3] border border-foreground/15 object-cover"
-                style={{ backgroundColor: color }}
+                style={{ backgroundColor: project.color }}
               />
             ))}
           </div>
