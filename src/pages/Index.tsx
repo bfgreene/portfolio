@@ -1,17 +1,29 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingProjects from "@/components/FloatingProjects";
+import { X } from "lucide-react";
 
 const miscPhotos = [
-  { color: "hsl(45, 30%, 75%)", caption: "Floor plan sketches for a short film set build." },
-  { color: "hsl(200, 20%, 65%)", caption: "Developing the palette for an upcoming period piece." },
-  { color: "hsl(0, 15%, 70%)", caption: "Sourcing and aging props for a commercial shoot." },
-  { color: "hsl(120, 15%, 65%)", caption: "Miniature tree fabrication, close-up." },
-  { color: "hsl(280, 15%, 70%)", caption: "Fabric swatches for set dressing research." },
-  { color: "hsl(30, 25%, 68%)", caption: "Workshop detail — scenic paint mixing station." },
+  { src: "/placeholder.svg", caption: "Floor plan sketches for a short film set build." },
+  { src: "/placeholder.svg", caption: "Developing the palette for an upcoming period piece." },
+  { src: "/placeholder.svg", caption: "Sourcing and aging props for a commercial shoot." },
+  { src: "/placeholder.svg", caption: "Miniature tree fabrication, close-up." },
+  { src: "/placeholder.svg", caption: "Fabric swatches for set dressing research." },
+  { src: "/placeholder.svg", caption: "Workshop detail — scenic paint mixing station." },
+  { src: "/placeholder.svg", caption: "On-set dressing for a music video shoot." },
+  { src: "/placeholder.svg", caption: "Custom wallpaper printing process." },
+  { src: "/placeholder.svg", caption: "Prop aging — distressed book spines." },
 ];
 
+interface MiscItem {
+  src: string;
+  caption: string;
+}
+
 const Index = () => {
+  const [selectedMisc, setSelectedMisc] = useState<MiscItem | null>(null);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -35,20 +47,48 @@ const Index = () => {
           <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-4">
             {miscPhotos.map((item, i) => (
-              <div key={i}>
+              <div key={i} className="cursor-pointer" onClick={() => setSelectedMisc(item)}>
                 <img
-                  src="/placeholder.svg"
+                  src={item.src}
                   alt={item.caption}
-                  className="w-full aspect-square border border-foreground/15 bg-primary object-cover mb-2"
+                  className="w-full aspect-square border border-foreground/15 bg-primary object-cover"
                 />
-                <p className="text-xs text-muted-foreground">{item.caption}</p>
               </div>
             ))}
           </div>
         </section>
       </main>
+
+      {/* Misc photo popup */}
+      {selectedMisc && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+          onClick={() => setSelectedMisc(null)}
+        >
+          <div
+            className="relative border border-foreground max-w-lg w-[90vw] p-5"
+            style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedMisc(null)}
+              className="absolute top-3 right-3 p-1 hover:opacity-70"
+              aria-label="Close"
+            >
+              <X className="h-5 w-5 text-foreground" />
+            </button>
+            <img
+              src={selectedMisc.src}
+              alt={selectedMisc.caption}
+              className="w-full aspect-square object-cover border border-foreground/15 mb-4"
+            />
+            <p className="text-sm text-muted-foreground">{selectedMisc.caption}</p>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
