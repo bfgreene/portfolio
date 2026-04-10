@@ -73,13 +73,15 @@ const Index = () => {
             style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={() => setSelectedMisc(null)}
-              className="absolute top-3 right-3 p-1 hover:opacity-70"
-              aria-label="Close"
-            >
-              <X className="h-5 w-5 text-foreground" />
-            </button>
+            <div className="flex justify-end mb-3">
+              <button
+                onClick={() => setSelectedMisc(null)}
+                className="p-1 hover:opacity-70"
+                aria-label="Close"
+              >
+                <X className="h-5 w-5 text-foreground" />
+              </button>
+            </div>
             <img
               src={selectedMisc.src}
               alt={selectedMisc.caption}
