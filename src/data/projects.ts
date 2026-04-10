@@ -33,6 +33,7 @@ export const projects: ProjectData[] = [
       "(Light) Body-Horror Comedy. Bright sparkling",
       "Made functioning chat website for in-camera effects."
       "Made graphics for all phone images"
+    ],
   },
   {
     slug: "song-of-the-wind",
