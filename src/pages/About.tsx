@@ -37,7 +37,6 @@ const About = () => {
               graphics, and food styling.
             </p>
             <p>
-              
               Background in tech, culinary, and fine art worlds. Bring an analytical 
               and creative mind to your project. Especially interested in period
               pieces and heavily stylized work.
@@ -75,9 +74,9 @@ const About = () => {
         <section className="mb-8">
           <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">C.V.</h2>
           <ul className="space-y-1.5 text-sm list-none p-0">
-            {
-            cvEntries.sort((a, b) => b.year - a.year) // descending (newest first)
-            cvEntries.map((entry, i) => (
+            {[...cvEntries]
+              .sort((a, b) => b.year - a.year)
+              .map((entry, i) => (
               <li key={i}>
                 <span className="text-muted-foreground">{entry.year}</span>
                 {" — "}
