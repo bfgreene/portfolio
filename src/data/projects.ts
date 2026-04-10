@@ -31,8 +31,8 @@ export const projects: ProjectData[] = [
       "Period drama requiring full set construction of a five-room interior with over 200 period-accurate props and custom scenic painting.",
     longDescription: [
       "(Light) Body-Horror Comedy. Bright sparkling",
-      "Made functioning chat website for in-camera effects."
-      "Made graphics for all phone images"
+      "Made functioning chat website for in-camera effects.",
+      "Made graphics for all phone images",
     ],
   },
   {
@@ -103,8 +103,8 @@ export const projects: ProjectData[] = [
       "Music video with large-format scenic painting, a 30-foot painted backdrop, and full art department coordination.",
     longDescription: [
       "Music Video and Album Media",
-      "I'll Change For You(link)"
-      "Grey gardens inspired, american victorian hoarding"
+      "I'll Change For You(link)",
+      "Grey gardens inspired, american victorian hoarding",
       "Created esoteric drawings, set dressing, food, props",
     ],
   },
