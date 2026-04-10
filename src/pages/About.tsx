@@ -15,6 +15,7 @@ const cvEntries = [
   { year: "2025", title: "Of Lambs and Wolves", role: "Art Director", type: "Short Film" },
   { year: "2024", title: "[Terminate]", role: "Production Designer", type: "Short Film" },
   { year: "2024", title: "Tender", role: "Graphics", type: "Short Film" },
+  { year: "2024", title: "Greg's Going to Rehab", role: "Leadman", type: "Feature Film" },
 ];
 
 const About = () => {
@@ -30,20 +31,19 @@ const About = () => {
           </h1>
           <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
             <p>
-              Benjamin Greene is a production designer and art director working across
-              film, television, and commercials. He handles everything from initial concept
-              sketches to on-set dressing — building period interiors from scratch, painting
-              30-foot backdrops, and hand-weathering more props than he can count.
+              I'm Production Designer and Art Director working across
+              film, music videos, and commercials. Everything from concept sketches, 
+              research, sourcing, budgeting, building, decorating, dressing, props, 
+              graphics, and food styling.
             </p>
             <p>
-              His approach is practical and resourceful. He works closely with directors
-              and cinematographers to make sure the design serves the story, not the other
-              way around. He's equally comfortable managing a department or getting his
-              hands dirty in the workshop.
+              
+              Background in tech, culinary, and fine art worlds. Bring an analytical 
+              and creative mind to your project. Especially interested in period
+              pieces and heavily stylized work.
             </p>
             <p>
-              When not on set, he can probably be found at a flea market, in a hardware
-              store, or flipping through old architecture books.
+              Drop me a line, let's work together. Will travel.
             </p>
           </div>
         </section>
@@ -54,18 +54,18 @@ const About = () => {
           <ul className="space-y-1 text-sm">
             <li>
               Email:{" "}
-              <a href="mailto:benjamin@example.com">benjamin@example.com</a>
+              <a href="mailto:bfgreene@gmail.com">safetotypeemail?@example.com</a>
             </li>
             <li>
               Instagram:{" "}
               <a href="https://instagram.com/benjamingreene" target="_blank" rel="noopener noreferrer">
-                @benjamingreene
+                @benverde_
               </a>
             </li>
             <li>
               IMDb:{" "}
               <a href="https://imdb.com/name/nm0000000" target="_blank" rel="noopener noreferrer">
-                Benjamin Greene on IMDb
+                Benjamin Greene (IV)
               </a>
             </li>
           </ul>
@@ -75,6 +75,8 @@ const About = () => {
         <section className="mb-8">
           <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">C.V.</h2>
           <ul className="space-y-1.5 text-sm list-none p-0">
+            {cvEntries.sort((a, b) => b.year - a.year) // descending (newest first)
+            }
             {cvEntries.map((entry, i) => (
               <li key={i}>
                 <span className="text-muted-foreground">{entry.year}</span>
