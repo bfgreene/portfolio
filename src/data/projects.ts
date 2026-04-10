@@ -30,10 +30,9 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Period drama requiring full set construction of a five-room interior with over 200 period-accurate props and custom scenic painting.",
     longDescription: [
-      "TOE required building an entire period interior from scratch on a soundstage. The director wanted warmth and intimacy — amber lighting, worn leather, tobacco-stained wallpaper.",
-      "I sourced over 200 period-accurate props from estate sales and antique dealers. Every book spine, every ashtray, every light fixture was vetted for accuracy.",
-      "The color palette centered on warm ambers, deep burgundies, and aged brass. We developed custom wallpaper prints based on archived patterns.",
-    ],
+      "(Light) Body-Horror Comedy. Bright sparkling",
+      "Made functioning chat website for in-camera effects."
+      "Made graphics for all phone images"
   },
   {
     slug: "song-of-the-wind",
@@ -54,9 +53,10 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Short film requiring a complete retro set build on a soundstage. Custom signage fabrication and practical lighting integration.",
     longDescription: [
-      "Song of the Wind was a visually driven short about memory and place. The entire film takes place across two carefully constructed environments.",
-      "We built the sets from the ground up: every surface needed to feel lived-in and authentic. The DP and I collaborated closely on integrating practical lighting into the set design.",
-      "Scenic painting was critical here. Every surface needed to look like it had decades of wear. I developed a layered aging technique using glazes and dry-brushing.",
+      "Period Drama",
+      "Heavy Construction component, buidilng a old stone fort inside of a hut. And hearth. Aging" ,
+      "Conceptualization and construction of a mythical machine that reads the wind",
+      "Managed many hands in the Art Department on tight schedule",
     ],
   },
   {
@@ -78,9 +78,8 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Commercial campaign with multiple set builds across three shooting days. Model-making, set dressing, and on-set art direction.",
     longDescription: [
-      "Winloot was a multi-spot commercial campaign that required versatile, eye-catching environments built to camera on tight timelines.",
-      "Each set was constructed to be modular and re-dressable, allowing us to create distinct looks within the same stage footprint.",
-      "The art direction balanced bold, graphic compositions with practical construction. Every element was designed to pop on screen while maintaining a handmade quality.",
+      "Commercial",
+      "Several Sets for one-day shoot",
     ],
   },
   {
@@ -102,9 +101,10 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Music video with large-format scenic painting, a 30-foot painted backdrop, and full art department coordination.",
     longDescription: [
-      "This Mitski music video required blending theatrical and cinematic visual languages. The director wanted painted backdrops instead of digital extensions.",
-      "I painted a 30-foot canvas backdrop depicting a surreal dreamscape. The technique combined traditional scenic painting methods with contemporary color theory to read well on camera.",
-      "Managing the art department through a tight prep was the other half of the job. Coordinating scenic painters, set dressers, and props buyers across two locations required careful scheduling.",
+      "Music Video and Album Media",
+      "I'll Change For You(link)"
+      "Grey gardens inspired, american victorian hoarding"
+      "Created esoteric drawings, set dressing, food, props",
     ],
   },
   {
@@ -126,9 +126,9 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Independent feature film shot across multiple locations. Managed logistics, sourced locations, and coordinated a 12-person art department.",
     longDescription: [
-      "CognAItive was an ambitious indie feature that explored themes of technology and identity. Each location needed to feel distinct but connected — a single emotional throughline across diverse settings.",
-      "I coordinated a 12-person art department across all locations, managing transport, local sourcing, and location agreements. We dressed over 20 locations in six weeks.",
-      "The palette mixed cold, sterile tech environments with warm, lived-in personal spaces — creating visual tension that mirrored the film's themes.",
+      "AI Horror",
+      "Technical Graphics and effects. AI taking over the computer sequence, coding screens, managing monitors and laptops",
+      "Construction of break away wall to be easly kicked through",
     ],
   },
 ];
