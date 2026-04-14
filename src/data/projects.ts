@@ -36,6 +36,8 @@ export const projects: ProjectData[] = [
       "Made functioning chat website for in-camera effects.",
       "Made graphics for all phone images",
     ],
+    director: "Elly Howard",
+    productionDesigner: "Brian Spadafora",
   },
   {
     slug: "song-of-the-wind",
@@ -61,6 +63,8 @@ export const projects: ProjectData[] = [
       "Conceptualization and construction of a mythical machine that reads the wind",
       "Managed many hands in the Art Department on tight schedule",
     ],
+    director: "Timofei Romanov",
+    productionDesigner: "Denis Budanoff",
   },
   {
     slug: "winloot",
@@ -84,6 +88,7 @@ export const projects: ProjectData[] = [
       "Commercial",
       "Several Sets for one-day shoot",
     ],
+    director: "TJ Nitti",
   },
   {
     slug: "mitski",
@@ -109,6 +114,8 @@ export const projects: ProjectData[] = [
       "Grey gardens inspired, american victorian hoarding",
       "Created esoteric drawings, set dressing, food, props",
     ],
+    director: "Lexie Alley",
+    productionDesigner: "Brian Spadafora",
   },
   {
     slug: "cognaitive",
@@ -133,5 +140,7 @@ export const projects: ProjectData[] = [
       "Technical Graphics and effects. AI taking over the computer sequence, coding screens, managing monitors and laptops",
       "Construction of break away wall to be easly kicked through",
     ],
+    director: "Tommy Savas",
+    productionDesigner: "Cheyenne Peerson",
   },
 ];
