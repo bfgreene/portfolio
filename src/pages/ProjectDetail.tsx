@@ -44,6 +44,13 @@ const ProjectDetail = () => {
             style={{ backgroundColor: project.color }}
           />
 
+          {(project.director || project.productionDesigner) && (
+            <div className="text-xs text-muted-foreground mb-6 space-y-0.5">
+              {project.director && <p>Director: {project.director}</p>}
+              {project.productionDesigner && <p>Production Designer: {project.productionDesigner}</p>}
+            </div>
+          )}
+
           <div className="max-w-2xl space-y-4 mb-10">
             {project.longDescription.map((para, i) => (
               <p key={i} className="text-sm leading-relaxed">{para}</p>
