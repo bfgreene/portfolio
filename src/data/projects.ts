@@ -8,6 +8,8 @@ export interface ProjectData {
   photos: string[];
   shortDescription: string;
   longDescription: string[];
+  director?: string;
+  productionDesigner?: string;
 }
 
 export const projects: ProjectData[] = [
