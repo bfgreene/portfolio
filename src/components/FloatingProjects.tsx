@@ -190,7 +190,7 @@ const FloatingProjects = () => {
           onClick={handleClose}
         >
           <div
-            className="relative border border-foreground max-w-2xl w-[90vw] max-h-[85vh] overflow-y-auto p-6"
+            className="relative max-w-2xl w-[90vw] max-h-[85vh] overflow-y-auto p-6"
             style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -213,6 +213,13 @@ const FloatingProjects = () => {
               className="w-full aspect-[16/9] border border-foreground/15 mb-6 object-cover"
               style={{ backgroundColor: selectedProject.color }}
             />
+
+            {(selectedProject.director || selectedProject.productionDesigner) && (
+              <div className="text-xs text-muted-foreground mb-4 space-y-0.5">
+                {selectedProject.director && <p>Director: {selectedProject.director}</p>}
+                {selectedProject.productionDesigner && <p>Production Designer: {selectedProject.productionDesigner}</p>}
+              </div>
+            )}
 
             <div className="space-y-3 mb-6">
               {selectedProject.longDescription.map((para, i) => (
