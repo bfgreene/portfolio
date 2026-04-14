@@ -5,15 +5,15 @@ import FloatingProjects from "@/components/FloatingProjects";
 import { X } from "lucide-react";
 
 const miscPhotos = [
-  { src: "/placeholder.svg", caption: "Floor plan sketches for a short film set build." },
-  { src: "/placeholder.svg", caption: "Developing the palette for an upcoming period piece." },
-  { src: "/placeholder.svg", caption: "Sourcing and aging props for a commercial shoot." },
-  { src: "/placeholder.svg", caption: "Miniature tree fabrication, close-up." },
-  { src: "/placeholder.svg", caption: "Fabric swatches for set dressing research." },
-  { src: "/placeholder.svg", caption: "Workshop detail — scenic paint mixing station." },
-  { src: "/placeholder.svg", caption: "On-set dressing for a music video shoot." },
-  { src: "/placeholder.svg", caption: "Custom wallpaper printing process." },
-  { src: "/placeholder.svg", caption: "Prop aging — distressed book spines." },
+  { src: "/assets/misc/misc1.png", caption: "Floor plan sketches for a short film set build." },
+  { src: "/assets/misc/misc2.png", caption: "Developing the palette for an upcoming period piece." },
+  { src: "/assets/misc/misc3.png", caption: "Sourcing and aging props for a commercial shoot." },
+  { src: "/assets/misc/misc4.png", caption: "Miniature tree fabrication, close-up." },
+  { src: "/assets/misc/misc5.png", caption: "Fabric swatches for set dressing research." },
+  { src: "/assets/misc/misc6.png", caption: "Workshop detail — scenic paint mixing station." },
+  { src: "/assets/misc/misc7.png", caption: "On-set dressing for a music video shoot." },
+  { src: "/assets/misc/misc8.png", caption: "Custom wallpaper printing process." },
+  { src: "/assets/misc/misc9.png", caption: "Prop aging — distressed book spines." },
 ];
 
 interface MiscItem {
