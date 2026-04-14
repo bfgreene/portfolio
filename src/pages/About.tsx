@@ -16,6 +16,9 @@ const cvEntries = [
   { year: "2024", title: "[Terminate]", role: "Production Designer", type: "Short Film" },
   { year: "2024", title: "Tender", role: "Graphics", type: "Short Film" },
   { year: "2024", title: "Greg's Going to Rehab", role: "Leadman", type: "Feature Film" },
+  { year: "2024", title: "The Errand", role: "Set Dresser", type: "Short Film" },
+  { year: "2024", title: "The Little Man", role: "Set Dresser", type: "Short Film" },
+  { year: "2024", title: "Song of the Wind", role: "Art Director", type: "Short Film" },
 ];
 
 const About = () => {
