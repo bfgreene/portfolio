@@ -69,7 +69,7 @@ const Index = () => {
           onClick={() => setSelectedMisc(null)}
         >
           <div
-            className="relative border border-foreground max-w-lg w-[90vw] p-5"
+            className="relative max-w-lg w-[90vw] p-5"
             style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
             onClick={(e) => e.stopPropagation()}
           >
