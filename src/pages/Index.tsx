@@ -32,7 +32,7 @@ const Index = () => {
         {/* Intro */}
         <section className="mb-4">
           <h1 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-2">
-            Select Work
+            Selected Work
           </h1>
         </section>
 
