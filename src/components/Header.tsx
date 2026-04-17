@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   const links = [
-    { to: "/", label: "Select Work" },
+    { to: "/", label: "Selected Work" },
     { to: "/about", label: "About" },
   ];
 
@@ -44,7 +44,7 @@ const Header = () => {
               Benjamin Greene
             </Link>
             <p className="text-xs text-muted-foreground mt-0.5 italic">
-              Production Designer &amp; Art Director  //  Los Angeles, CA
+              Production Designer &amp; Art Director &nbsp; // &nbsp; Los Angeles, CA
             </p>
             {/* <p className="text-xs text-muted-foreground italic">
               Los Angeles, CA
