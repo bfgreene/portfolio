@@ -22,12 +22,12 @@ export const projects: ProjectData[] = [
     image: "/assets/toe/toe1.png",
     photos: [
       "/assets/toe/toe1.png",
-      "/assets/toe/toe2.svg",
-      "/assets/toe/toe3.svg",
-      "/assets/toe/toe4.svg",
-      "/assets/toe/toe5.svg",
-      "/assets/toe/toe6.svg",
-      "/assets/toe/toe7.svg",
+      "/assets/toe/toe2.png",
+      "/assets/toe/toe3.png",
+      "/assets/toe/toe4.png",
+      "/assets/toe/toe5.png",
+      "/assets/toe/toe6.png",
+      "/assets/toe/toe7.png",
     ],
     shortDescription:
       "Period drama requiring full set construction of a five-room interior with over 200 period-accurate props and custom scenic painting.",
