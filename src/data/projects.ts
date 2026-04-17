@@ -126,12 +126,12 @@ export const projects: ProjectData[] = [
     image: "/assets/cognaitive/cognaitive1.png",
     photos: [
       "/assets/cognaitive/cognaitive1.png",
-      "/assets/cognaitive/cognaitive2.svg",
-      "/assets/cognaitive/cognaitive3.svg",
-      "/assets/cognaitive/cognaitive4.svg",
-      "/assets/cognaitive/cognaitive5.svg",
-      "/assets/cognaitive/cognaitive6.svg",
-      "/assets/cognaitive/cognaitive7.svg",
+      "/assets/cognaitive/cognaitive2.png",
+      "/assets/cognaitive/cognaitive3.png",
+      "/assets/cognaitive/cognaitive4.png",
+      "/assets/cognaitive/cognaitive5.png",
+      "/assets/cognaitive/cognaitive6.png",
+      "/assets/cognaitive/cognaitive7.png",
     ],
     shortDescription:
       "Independent feature film shot across multiple locations. Managed logistics, sourced locations, and coordinated a 12-person art department.",
