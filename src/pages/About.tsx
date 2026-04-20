@@ -59,7 +59,9 @@ const About = () => {
           <ul className="space-y-1 text-sm">
             <li>
               {" "}
-              <a href="mailto:bfgreene@gmail.com">b f g r e e n e @ g m a i l . c o m</a>
+              <a href="mailto:bfgreene@gmail.com">
+                b f g r e e n e @ g m a i l . c o m
+              </a>
             </li>
             <li>
               {" "}
@@ -68,7 +70,7 @@ const About = () => {
               </a>
             </li>
             <li>
-              " "}
+              {" "}
               <a href="https://imdb.com/name/nm0000000" target="_blank" rel="noopener noreferrer">
                 Benjamin Greene (IV)
               </a>
