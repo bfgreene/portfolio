@@ -32,9 +32,8 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Period drama requiring full set construction of a five-room interior with over 200 period-accurate props and custom scenic painting.",
     longDescription: [
-      "(Light) Body-Horror Comedy. Bright sparkling",
-      "Made functioning chat website for in-camera effects.",
-      "Made graphics for all phone images",
+      "Body-horror comedy",
+      "Created functioning custom video chat website for in-camera effects. Phone graphics, drawings, food styling.",
     ],
     director: "Elly Howard",
     productionDesigner: "Brian Spadafora",
@@ -59,9 +58,9 @@ export const projects: ProjectData[] = [
       "Short film requiring a complete retro set build on a soundstage. Custom signage fabrication and practical lighting integration.",
     longDescription: [
       "Period Drama",
-      "Heavy Construction component, buidilng a old stone fort inside of a hut. And hearth. Aging" ,
-      "Conceptualization and construction of a mythical machine that reads the wind",
-      "Managed many hands in the Art Department on tight schedule",
+      "Heavy Construction aspect, built a old stone fort inside of a country hut. Built hearth from wood frame and stryrofoam hearth. Texturing and aging." ,
+      "Conceptualization and construction of a mythical machine that makes music from the wind.",
+      "Managed many hands in the Art Department on tight schedule.",
     ],
     director: "Timofei Romanov",
     productionDesigner: "Denis Budanoff",
@@ -86,7 +85,7 @@ export const projects: ProjectData[] = [
       "Commercial campaign with multiple set builds across three shooting days. Model-making, set dressing, and on-set art direction.",
     longDescription: [
       "Commercial",
-      "Several Sets for one-day shoot",
+      "Several Sets for one-day shoot.",
     ],
     director: "TJ Nitti",
   },
@@ -111,8 +110,8 @@ export const projects: ProjectData[] = [
     longDescription: [
       "Music Video and Album Media",
       "I'll Change For You(link)",
-      "Grey gardens inspired, american victorian hoarding",
-      "Created esoteric drawings, set dressing, food, props",
+      "Created esoteric drawings, food, props.",
+      "Helped set dress this mess."
     ],
     director: "Lexie Alley",
     productionDesigner: "Brian Spadafora",
@@ -136,9 +135,9 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Independent feature film shot across multiple locations. Managed logistics, sourced locations, and coordinated a 12-person art department.",
     longDescription: [
-      "AI Horror",
-      "Technical Graphics and effects. AI taking over the computer sequence, coding screens, managing monitors and laptops",
-      "Construction of break away wall to be easly kicked through",
+      "AI Horror Comedy",
+      "Technical Graphics and effects. &quot;AI taking over the network&quot; sequence, coding screens, managed monitors and laptops.",
+      "Construction of break-through wall to be easily kicked through. Other set dressing.",
     ],
     director: "Tommy Savas",
     productionDesigner: "Cheyenne Peerson",
