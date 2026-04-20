@@ -19,6 +19,7 @@ const cvEntries = [
   { year: "2024", title: "The Errand", role: "Set Dresser", type: "Short Film" },
   { year: "2024", title: "The Little Man", role: "Set Dresser", type: "Short Film" },
   { year: "2024", title: "Song of the Wind", role: "Art Director", type: "Short Film" },
+  { year: "2024", title: "The Red Troth", role: "Set Decorator", type: "Short Film" },
 ];
 
 const About = () => {
@@ -37,18 +38,17 @@ const About = () => {
           */}
           <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
             <p>
-              I'm Production Designer and Art Director working across
-              film, music videos, and commercials. Everything from concept sketches, 
-              research, sourcing, budgeting, building, decorating, dressing, props, 
-              graphics, and food styling.
+              PD and Art Director for film, music videos, web-series, and commercials. 
+              Concept sketches, research, sourcing, budgeting, building, painting, 
+              aging, decorating, dressing, props, graphics, and food styling.
             </p>
             <p>
-              Background in tech, culinary, and fine art worlds. Bring an analytical 
-              and creative mind to your project. Especially interested in period
-              pieces and heavily stylized work.
+              Background in the tech, culinary, and fine art worlds. I bring a creative 
+              and analytical perspective to your project. Particularly interested in period
+              pieces and heavy stylization.
             </p>
             <p>
-              Drop me a line, let's work together. Will travel.
+              Will travel.
             </p>
           </div>
         </section>
@@ -58,17 +58,17 @@ const About = () => {
           <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">Contact &amp; Links</h2>
           <ul className="space-y-1 text-sm">
             <li>
-              Email:{" "}
-              <a href="mailto:bfgreene@gmail.com">safetotypeemail?@example.com</a>
+              {" "}
+              <a href="mailto:bfgreene@gmail.com">b f g r e e n e @ g m a i l . c o m</a>
             </li>
             <li>
-              Instagram:{" "}
-              <a href="https://instagram.com/benjamingreene" target="_blank" rel="noopener noreferrer">
+              {" "}
+              <a href="https://instagram.com/benverd_" target="_blank" rel="noopener noreferrer">
                 @benverde_
               </a>
             </li>
             <li>
-              IMDb:{" "}
+              " "}
               <a href="https://imdb.com/name/nm0000000" target="_blank" rel="noopener noreferrer">
                 Benjamin Greene (IV)
               </a>
