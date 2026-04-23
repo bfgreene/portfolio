@@ -37,14 +37,13 @@ const About = () => {
           */}
           <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
             <p>
-              PD and Art Director for film, music videos, web-series, and commercials. 
-              Concept sketches, research, sourcing, budgeting, building, painting, 
+              Production Designer and Art Director for film, music videos, web-series, and commercials. 
+              Responsibilites from concept sketches to ideation, research, sourcing, budgeting, logistics building, painting, 
               aging, decorating, dressing, props, graphics, and food styling.
             </p>
             <p>
-              Background in the tech, culinary, and fine art worlds. I bring a creative 
-              and analytical perspective to your project. Particularly interested in period
-              pieces and heavy stylization.
+              I bring a creative and analytical perspective to your project, from a background in the tech, culinary, and fine art worlds. 
+              Particularly interested in period pieces and heavy stylization.
             </p>
             <p>
               Will travel.
@@ -54,12 +53,14 @@ const About = () => {
 
         {/* Contact */}
         <section className="mb-12">
+          {/*
           <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">Contact &amp; Links</h2>
+          */}
           <ul className="space-y-1 text-sm">
             <li>
               {" "}
               <a href="mailto:bfgreene@gmail.com">
-                b f g r e e n e @ g m a i l . c o m
+                bfgreene@gmail.com
               </a>
             </li>
             <li>
@@ -68,12 +69,14 @@ const About = () => {
                 @benverde_
               </a>
             </li>
+            {/*
             <li>
               {" "}
               <a href="https://imdb.com/name/nm0000000" target="_blank" rel="noopener noreferrer">
                 Benjamin Greene (IV)
               </a>
             </li>
+            */}
           </ul>
         </section>
 
