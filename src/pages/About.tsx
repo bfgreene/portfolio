@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 
 const cvEntries = [
   { year: "2026", title: "Liberty Mutual x Pinterest", role: "Art Director", type: "Commercial" },
+  { year: "2026", title: "Frozen Heir", role: "Art Director", type: "Streaming Series" },
   { year: "2025", title: "Mitski", role: "Prop Master / Set Dresser", type: "Music Video" },
   { year: "2025", title: "Cocomelon: The Melon Patch", role: "Art Director", type: "Web Series" },
   { year: "2025", title: "Of Lambs and Wolves", role: "Art Director", type: "Short Film" },
@@ -13,7 +14,7 @@ const cvEntries = [
   { year: "2024", title: "Song of the Wind", role: "Art Director", type: "Short Film" },
   { year: "2024", title: "TOE", role: "Art Director", type: "Short Film" },
   { year: "2024", title: "Winloot", role: "Production Designer", type: "Commercial" },
-  { year: "2024", title: "[Terminate]", role: "Production Designer", type: "Short Film" },
+  { year: "2024", title: "Her Choice", role: "Production Designer", type: "Short Film" },
   { year: "2024", title: "Greg's Going to Rehab", role: "Leadman", type: "Feature Film" },
   { year: "2024", title: "The Red Troth", role: "Set Decorator", type: "Short Film" },
   { year: "2024", title: "The Errand", role: "Set Dresser", type: "Short Film" },
