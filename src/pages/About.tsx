@@ -38,12 +38,12 @@ const About = () => {
           */}
           <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
             <p>
-              Production Designer and Art Director for film, music videos, web-series, and commercials. 
-              Responsibilites from concept sketches to ideation, research, sourcing, budgeting, logistics building, painting, 
+              Production Designer and Art Director for film, music videos, streaming series, and commercials. 
+              Responsibilites from concept sketches to ideation, research, sourcing, budgeting, logistics, building, painting, 
               aging, decorating, dressing, props, graphics, and food styling.
             </p>
             <p>
-              I bring a creative and analytical perspective to your project, from a background in the tech, culinary, and fine art worlds. 
+              With a background in the tech, culinary, and fine art worlds, I will bring a creative and analytical perspective to your project. 
               Particularly interested in period pieces and heavy stylization.
             </p>
             <p>
