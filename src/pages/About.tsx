@@ -44,10 +44,7 @@ const About = () => {
             </p>
             <p>
               With a background in the tech, culinary, and fine art worlds, I will bring a creative and analytical perspective to your project. 
-              Particularly interested in period pieces and heavy stylization.
-            </p>
-            <p>
-              Will travel.
+              Particularly interested in period pieces and heavy stylization. Will travel.
             </p>
           </div>
         </section>
@@ -61,13 +58,13 @@ const About = () => {
             <li>
               {" "}
               <a href="mailto:bfgreene@gmail.com">
-                bfgreene@gmail.com
+                <b>bfgreene@gmail.com</b>
               </a>
             </li>
             <li>
               {" "}
               <a href="https://instagram.com/benverd_" target="_blank" rel="noopener noreferrer">
-                @benverde_
+                <b>@benverde_</b>
               </a>
             </li>
             {/*
