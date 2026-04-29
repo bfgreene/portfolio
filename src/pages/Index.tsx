@@ -14,6 +14,7 @@ const miscPhotos = [
   { src: "/assets/misc/misc7.png", caption: "Pagan altar from surrounding dessert materials (The Red Troth)" },
   { src: "/assets/misc/misc8.png", caption: "Photoshop graphics for JW literature (Her Choice)" },
   { src: "/assets/misc/misc9.png", caption: "Photoshop graphics for JW literature II (Her Choice)" },
+  { src: "/assets/misc/misc9.png", caption: "New misc entry past 9" },
 ];
 
 interface MiscItem {
