@@ -86,7 +86,7 @@ const Index = () => {
             <img
               src={selectedMisc.src}
               alt={selectedMisc.caption}
-              className="w-full aspect-square object-cover border border-foreground/15 mb-4"
+              className="w-full aspect-auto object-cover border border-foreground/15 mb-4"
             />
             <p className="text-sm text-muted-foreground">{selectedMisc.caption}</p>
           </div>
