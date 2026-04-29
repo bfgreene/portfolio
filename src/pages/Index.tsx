@@ -44,7 +44,7 @@ const Index = () => {
 
         {/* Misc */}
         <section className="mb-8">
-          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-1">misc.</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground tracking-wide mb-1">misc.</h2>
           <p className="text-sm text-muted-foreground mb-6 italic">
             Process, details, and other work.
           </p>
@@ -86,7 +86,8 @@ const Index = () => {
             <img
               src={selectedMisc.src}
               alt={selectedMisc.caption}
-              className="w-full aspect-square object-cover border border-foreground/15 mb-4"
+              {/* removed "aspect-square" from className below */}
+              className="w-full object-cover border border-foreground/15 mb-4"
             />
             <p className="text-sm text-muted-foreground">{selectedMisc.caption}</p>
           </div>
