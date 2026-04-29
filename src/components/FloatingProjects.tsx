@@ -12,7 +12,7 @@ interface BoxState {
   h: number;
 }
 
-const SPEED = 0.7;
+const SPEED = 0.6;
 
 function randomVelocity() {
   const angle = Math.random() * Math.PI * 2;
