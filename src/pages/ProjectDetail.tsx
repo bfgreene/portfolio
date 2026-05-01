@@ -51,6 +51,9 @@ const ProjectDetail = () => {
             <img
               src={project.image}
               alt={`${project.title} — hero`}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               className="w-full aspect-[16/9] mb-8 object-cover"
             />
           )}
@@ -89,6 +92,8 @@ const ProjectDetail = () => {
                     key={i}
                     src={photo}
                     alt={`${project.title} — gallery image ${i + 2}`}
+                    loading="eager"
+                    decoding="async"
                     className="w-full aspect-[4/3] object-cover"
                   />
                 ))}

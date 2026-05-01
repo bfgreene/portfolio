@@ -55,6 +55,8 @@ const Index = () => {
                 <img
                   src={item.src}
                   alt={item.caption}
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }}
                 />
