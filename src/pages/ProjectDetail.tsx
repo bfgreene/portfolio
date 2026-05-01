@@ -68,6 +68,18 @@ const ProjectDetail = () => {
             ))}
           </div>
 
+          {project.slug === "mitski" && (
+            <div className="mb-10 aspect-video w-full">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/BPy1NIiKKW0"
+                title="Mitski — I'll Change For You"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          )}
+
           {galleryPhotos.length > 0 && (
             <>
               <h2 className="text-xl mb-4">Gallery</h2>
