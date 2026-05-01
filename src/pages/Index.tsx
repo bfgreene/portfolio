@@ -51,11 +51,12 @@ const Index = () => {
           </p>
           <div className="grid grid-cols-3 gap-4">
             {miscPhotos.map((item, i) => (
-              <div key={i} className="cursor-pointer" onClick={() => setSelectedMisc(item)}>
+              <div key={i} className="cursor-pointer aspect-square bg-muted/30" onClick={() => setSelectedMisc(item)}>
                 <img
                   src={item.src}
                   alt={item.caption}
-                  className="w-full aspect-square border border-foreground/15 bg-primary object-cover"
+                  className="w-full h-full object-cover"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }}
                 />
               </div>
             ))}
@@ -87,7 +88,7 @@ const Index = () => {
             <img
               src={selectedMisc.src}
               alt={selectedMisc.caption}
-              className="w-full aspect-auto object-cover border border-foreground/15 mb-4"
+              className="w-full aspect-auto object-cover mb-4"
             />
             <p className="text-sm text-muted-foreground">{selectedMisc.caption}</p>
           </div>

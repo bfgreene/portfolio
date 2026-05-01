@@ -3,6 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projects } from "@/data/projects";
 
+const isPlaceholder = (src?: string) =>
+  !src || src.endsWith("placeholder.svg") || src.endsWith(".svg");
+
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
@@ -19,6 +22,8 @@ const ProjectDetail = () => {
       </div>
     );
   }
+
+  const galleryPhotos = project.photos.slice(1).filter((p) => !isPlaceholder(p));
 
   return (
     <div className="min-h-screen">
@@ -37,12 +42,13 @@ const ProjectDetail = () => {
             {project.title}
           </h1>
 
-          <img
-            src={project.image || "/placeholder.svg"}
-            alt={`${project.title} — hero`}
-            className="w-full aspect-[16/9] border border-foreground/15 mb-8 object-cover"
-            style={{ backgroundColor: project.color }}
-          />
+          {!isPlaceholder(project.image) && (
+            <img
+              src={project.image}
+              alt={`${project.title} — hero`}
+              className="w-full aspect-[16/9] mb-8 object-cover"
+            />
+          )}
 
           {(project.director || project.productionDesigner) && (
             <div className="text-xs text-muted-foreground mb-6 space-y-0.5">
@@ -57,18 +63,21 @@ const ProjectDetail = () => {
             ))}
           </div>
 
-          <h2 className="text-xl mb-4">Gallery</h2>
-          <div className="grid sm:grid-cols-2 gap-6 mb-8">
-            {project.photos.slice(1).map((photo, i) => (
-              <img
-                key={i}
-                src={photo}
-                alt={`${project.title} — gallery image ${i + 2}`}
-                className="w-full aspect-[4/3] border border-foreground/15 object-cover"
-                style={{ backgroundColor: project.color }}
-              />
-            ))}
-          </div>
+          {galleryPhotos.length > 0 && (
+            <>
+              <h2 className="text-xl mb-4">Gallery</h2>
+              <div className="grid sm:grid-cols-2 gap-6 mb-8">
+                {galleryPhotos.map((photo, i) => (
+                  <img
+                    key={i}
+                    src={photo}
+                    alt={`${project.title} — gallery image ${i + 2}`}
+                    className="w-full aspect-[4/3] object-cover"
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </section>
       </main>
 
