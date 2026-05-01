@@ -162,6 +162,9 @@ const FloatingProjects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                   className="w-full aspect-[4/3] object-cover mb-3"
                 />
               )}
