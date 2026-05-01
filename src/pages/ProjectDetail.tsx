@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,6 +10,10 @@ const isPlaceholder = (src?: string) =>
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!project) {
     return (
@@ -62,6 +67,18 @@ const ProjectDetail = () => {
               <p key={i} className="text-sm leading-relaxed">{para}</p>
             ))}
           </div>
+
+          {project.slug === "mitski" && (
+            <div className="mb-10 aspect-video w-full">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/BPy1NIiKKW0"
+                title="Mitski — I'll Change For You"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          )}
 
           {galleryPhotos.length > 0 && (
             <>
