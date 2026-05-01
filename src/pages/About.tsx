@@ -36,16 +36,26 @@ const About = () => {
             About
           </h1>
           */}
-          <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
-            <p>
-              Production Designer and Art Director for film, music videos, streaming series, and commercials. 
-              Responsibilites from concept sketches to ideation, research, sourcing, budgeting, logistics, building, painting, 
-              aging, decorating, dressing, props, graphics, and food styling.
-            </p>
-            <p>
-              With a background in the tech, culinary, and fine art worlds, I will bring a creative and analytical perspective to your project. 
-              Particularly interested in period pieces and heavy stylization. Will travel.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-start">
+            <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
+              <p>
+                Production Designer and Art Director for film, music videos, streaming series, and commercials.
+                Responsibilites from concept sketches to ideation, research, sourcing, budgeting, logistics, building, painting,
+                aging, decorating, dressing, props, graphics, and food styling.
+              </p>
+              <p>
+                With a background in the tech, culinary, and fine art worlds, I will bring a creative and analytical perspective to your project.
+                Particularly interested in period pieces and heavy stylization. Will travel.
+              </p>
+            </div>
+            <img
+              src="/assets/about/about1.png"
+              alt="Benjamin Greene"
+              loading="eager"
+              decoding="async"
+              className="w-40 h-40 md:w-48 md:h-48 object-cover justify-self-start md:justify-self-end"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }}
+            />
           </div>
         </section>
 
