@@ -62,6 +62,20 @@ const FloatingProjects = () => {
     return () => clearTimeout(timer);
   }, [initBoxes]);
 
+  // Prefetch all project images so detail pages show instantly
+  useEffect(() => {
+    const urls = new Set<string>();
+    projects.forEach((p) => {
+      if (!isPlaceholder(p.image)) urls.add(p.image);
+      p.photos.forEach((ph) => { if (!isPlaceholder(ph)) urls.add(ph); });
+    });
+    urls.forEach((src) => {
+      const img = new Image();
+      img.decoding = "async";
+      img.src = src;
+    });
+  }, []);
+
   useEffect(() => {
     const tick = () => {
       if (initialized.current) {
