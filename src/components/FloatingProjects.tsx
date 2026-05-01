@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { projects, ProjectData } from "@/data/projects";
-import { X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { projects } from "@/data/projects";
+import { useNavigate } from "react-router-dom";
 
 interface BoxState {
   x: number;
@@ -19,13 +18,15 @@ function randomVelocity() {
   return { vx: Math.cos(angle) * SPEED, vy: Math.sin(angle) * SPEED };
 }
 
+const isPlaceholder = (src?: string) =>
+  !src || src.endsWith("placeholder.svg") || src.endsWith(".svg");
+
 const FloatingProjects = () => {
+  const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
   const boxRefs = useRef<(HTMLDivElement | null)[]>([]);
   const statesRef = useRef<BoxState[]>([]);
-  const pausedRef = useRef(false);
   const animRef = useRef<number>(0);
-  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
   const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
   const [zIndices, setZIndices] = useState<number[]>([]);
   const overlapTracker = useRef<Record<string, boolean>>({});
@@ -63,7 +64,7 @@ const FloatingProjects = () => {
 
   useEffect(() => {
     const tick = () => {
-      if (!pausedRef.current && initialized.current) {
+      if (initialized.current) {
         const container = containerRef.current;
         if (!container) { animRef.current = requestAnimationFrame(tick); return; }
         const cw = container.clientWidth;
@@ -131,16 +132,6 @@ const FloatingProjects = () => {
     return () => cancelAnimationFrame(animRef.current);
   }, []);
 
-  const handleSelect = (project: ProjectData) => {
-    pausedRef.current = true;
-    setSelectedProject(project);
-  };
-
-  const handleClose = () => {
-    setSelectedProject(null);
-    pausedRef.current = false;
-  };
-
   return (
     <div className="relative">
       <div
@@ -164,14 +155,16 @@ const FloatingProjects = () => {
                 : "translate(-9999px, -9999px)",
               willChange: "transform",
             }}
-            onClick={() => handleSelect(project)}
+            onClick={() => navigate(`/project/${project.slug}`)}
           >
             <div className="p-3">
-              <img
-                src={project.image || "/placeholder.svg"}
-                alt={project.title}
-                className="w-full aspect-[4/3] object-cover mb-3"
-              />
+              {!isPlaceholder(project.image) && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full aspect-[4/3] object-cover mb-3"
+                />
+              )}
               <h2 className="text-xl font-semibold mb-1" style={{ color: "#0000EE" }}>
                 {project.title}
               </h2>
@@ -182,72 +175,6 @@ const FloatingProjects = () => {
           </div>
         ))}
       </div>
-
-      {selectedProject && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center"
-          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
-          onClick={handleClose}
-        >
-          <div
-            className="relative max-w-2xl w-[90vw] max-h-[85vh] overflow-y-auto p-6"
-            style={{ backgroundColor: "hsl(60, 20%, 97%)" }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={handleClose}
-              className="absolute top-3 right-3 p-1 hover:opacity-70"
-              aria-label="Close"
-            >
-              <X className="h-5 w-5 text-foreground" />
-            </button>
-
-            <p className="text-xs text-muted-foreground mb-1 italic">
-              {selectedProject.role} · {selectedProject.year}
-            </p>
-            <h2 className="text-2xl mb-4 text-foreground">{selectedProject.title}</h2>
-
-            <img
-              src={selectedProject.image || "/placeholder.svg"}
-              alt={selectedProject.title}
-              className="w-full aspect-[16/9] border border-foreground/15 mb-6 object-cover"
-              style={{ backgroundColor: selectedProject.color }}
-            />
-
-            {(selectedProject.director || selectedProject.productionDesigner) && (
-              <div className="text-xs text-muted-foreground mb-4 space-y-0.5">
-                {selectedProject.director && <p>Director: {selectedProject.director}</p>}
-                {selectedProject.productionDesigner && <p>Production Designer: {selectedProject.productionDesigner}</p>}
-              </div>
-            )}
-
-            <div className="space-y-3 mb-6">
-              {selectedProject.longDescription.map((para, i) => (
-                <p key={i} className="text-sm leading-relaxed">{para}</p>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              {selectedProject.photos.slice(1).map((photo, i) => (
-                <img
-                  key={i}
-                  src={photo}
-                  alt={`${selectedProject.title} gallery ${i + 2}`}
-                  className="w-full aspect-[4/3] border border-foreground/15 object-cover"
-                  style={{ backgroundColor: selectedProject.color }}
-                />
-              ))}
-            </div>
-
-            <Link
-              to={`/project/${selectedProject.slug}`}
-              className="text-sm text-primary underline hover:text-accent"
-            >
-              View full project →
-            </Link>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
