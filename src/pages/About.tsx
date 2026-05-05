@@ -91,8 +91,8 @@ const About = () => {
                 Benjamin Greene (IV)
               </a>
             </li>
-            */}
           </ul>
+          */}
         </section>
     
         {/* CV */}
