@@ -36,7 +36,7 @@ const About = () => {
             About
           </h1>
           */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-stretch">
+          <div className="flex flex-col md:flex-row gap-6 items-stretch">
             <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
               <p>
                 Production Designer and Art Director for film, music videos, streaming series, and commercials.
@@ -53,7 +53,7 @@ const About = () => {
               alt="Benjamin Greene"
               loading="eager"
               decoding="async"
-              className="h-full w-auto object-cover justify-self-start md:justify-self-end"
+              className="h-auto md:h-full w-auto object-cover self-stretch"
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }}
             />
           </div>
