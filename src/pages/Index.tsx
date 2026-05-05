@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 
 const miscPhotos = [
   { src: "/assets/misc/misc1.png", caption: "Food styling (Liberty Mutual x Pinterest)" },
-  { src: "/assets/misc/misc2.png", caption: "Construction of break-through drywall (CognAItive)" },
+  { src: "/assets/misc/misc2.png", caption: "Behind the scenes, Office Set(Thank You For Coming)" },
   { src: "/assets/misc/misc3.png", caption: "Scoring of drywall for easy break-through (CognAItive)" },
   { src: "/assets/misc/misc4.png", caption: "Impromtu old-west sign painting (Of Lambs and Wolves)" },
   { src: "/assets/misc/misc5.png", caption: "Fabrication of prop marijuana (Greg's Going to Rehab)" },
@@ -14,7 +14,6 @@ const miscPhotos = [
   { src: "/assets/misc/misc7.png", caption: "Pagan altar from surrounding dessert materials (The Red Troth)" },
   { src: "/assets/misc/misc8.png", caption: "Photoshop graphics for JW literature (Her Choice)" },
   { src: "/assets/misc/misc9.png", caption: "Photoshop graphics for JW literature II (Her Choice)" },
-  { src: "/assets/misc/misc9.png", caption: "New misc entry past 9" },
 ];
 
 interface MiscItem {
