@@ -80,7 +80,10 @@ const About = () => {
             */}
           </ul>
         </section>
-
+        <section className="mb-12"></section>
+        <section className="mb-12"></section>
+        <section className="mb-12"></section>
+        <section className="mb-12"></section>
 
         {/* CV */}
         <section className="mb-8">
