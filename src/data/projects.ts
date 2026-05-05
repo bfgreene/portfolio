@@ -75,11 +75,11 @@ export const projects: ProjectData[] = [
     photos: [
       "/assets/winloot/winloot1.png",
       "/assets/winloot/winloot2.png",
-      "/assets/winloot/winloot3.svg",
-      "/assets/winloot/winloot4.svg",
-      "/assets/winloot/winloot5.svg",
-      "/assets/winloot/winloot6.svg",
-      "/assets/winloot/winloot7.svg",
+      "/assets/winloot/winloot3.png",
+      "/assets/winloot/winloot4.png",
+      "/assets/winloot/winloot5.png",
+      "/assets/winloot/winloot6.png",
+      "/assets/winloot/winloot7.png",
     ],
     shortDescription:
       "Commercial campaign with multiple set builds across three shooting days. Model-making, set dressing, and on-set art direction.",
