@@ -49,7 +49,7 @@ const About = () => {
               </p>
             </div>
             <img
-              src="/assets/about/about1.png"
+              src="/assets/about/about1.jpg"
               alt="Benjamin Greene"
               loading="eager"
               decoding="async"
