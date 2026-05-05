@@ -57,13 +57,6 @@ const About = () => {
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }}
             />
           </div>
-        </section>
-
-        {/* Contact */}
-        <section className="mb-12">
-          {/*
-          <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">Contact &amp; Links</h2>
-          */}
           <ul className="space-y-1 text-sm">
             <li>
               {" "}
@@ -87,6 +80,7 @@ const About = () => {
             */}
           </ul>
         </section>
+
 
         {/* CV */}
         <section className="mb-8">
