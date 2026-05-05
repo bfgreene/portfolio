@@ -80,11 +80,7 @@ const About = () => {
             */}
           </ul>
         </section>
-        <section className="mb-12"></section>
-        <section className="mb-12"></section>
-        <section className="mb-12"></section>
-        <section className="mb-12"></section>
-
+    
         {/* CV */}
         <section className="mb-8">
           <h2 className="text-lg md:text-xl font-semibold text-muted-foreground uppercase tracking-wide mb-4">C.V.</h2>
