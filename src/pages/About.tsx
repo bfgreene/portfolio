@@ -36,7 +36,7 @@ const About = () => {
             About
           </h1>
           */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-stretch">
             <div className="max-w-2xl space-y-4 text-sm leading-relaxed">
               <p>
                 Production Designer and Art Director for film, music videos, streaming series, and commercials.
@@ -53,20 +53,20 @@ const About = () => {
               alt="Benjamin Greene"
               loading="eager"
               decoding="async"
-              className="w-40 h-40 md:w-48 md:h-48 object-cover justify-self-start md:justify-self-end"
+              className="h-full w-auto object-cover justify-self-start md:justify-self-end"
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }}
             />
           </div>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-1 text-sm mt-6 mb-20">
             <li>
-              {" "}
-              <a href="mailto:bfgreene@gmail.com">
+              <a href="mailto:bfgreene@gmail.com" className="inline-flex items-center gap-2">
+                <img src="/assets/other/email-96.jpg" alt="" className="h-[1em] w-[1em] object-contain" />
                 <b>bfgreene@gmail.com</b>
               </a>
             </li>
             <li>
-              {" "}
-              <a href="https://instagram.com/benverd_" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/benverd_" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                <img src="/assets/other/instagram-144.jpg" alt="" className="h-[1em] w-[1em] object-contain" />
                 <b>@benverde_</b>
               </a>
             </li>
