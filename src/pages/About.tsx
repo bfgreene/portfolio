@@ -47,6 +47,20 @@ const About = () => {
                 With a background in the tech, culinary, and fine art worlds, I will bring a creative and analytical perspective to your project.
                 Particularly interested in period pieces and heavy stylization. Will travel.
               </p>
+              <p>
+                <li>
+                  <a href="mailto:bfgreene@gmail.com" className="inline-flex items-center gap-2">
+                    <img src="/assets/other/email-96.jpg" alt="" className="h-[1em] w-[1em] object-contain" />
+                    <b>bfgreene@gmail.com</b>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/benverd_" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                    <img src="/assets/other/instagram-144.jpg" alt="" className="h-[1em] w-[1em] object-contain" />
+                    <b>@benverde_</b>
+                  </a>
+                </li>
+              </p>
             </div>
             <img
               src="/assets/about/about1.jpeg"
@@ -57,7 +71,7 @@ const About = () => {
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }}
             />
           </div>
-          <ul className="space-y-1 text-sm mt-6 mb-20">
+          {/* <ul className="space-y-1 text-sm mt-6 mb-20">
             <li>
               <a href="mailto:bfgreene@gmail.com" className="inline-flex items-center gap-2">
                 <img src="/assets/other/email-96.jpg" alt="" className="h-[1em] w-[1em] object-contain" />
@@ -69,7 +83,7 @@ const About = () => {
                 <img src="/assets/other/instagram-144.jpg" alt="" className="h-[1em] w-[1em] object-contain" />
                 <b>@benverde_</b>
               </a>
-            </li>
+            </li> */}
             {/*
             <li>
               {" "}
