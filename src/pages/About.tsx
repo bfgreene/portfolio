@@ -48,6 +48,7 @@ const About = () => {
                 Particularly interested in period pieces and heavy stylization. Will travel.
               </p>
               <p>
+                <ul className="space-y-1 text-sm mt-6 mb-20">
                 <li>
                   <a href="mailto:bfgreene@gmail.com" className="inline-flex items-center gap-2">
                     <img src="/assets/other/email-96.jpg" alt="" className="h-[1em] w-[1em] object-contain" />
@@ -60,6 +61,7 @@ const About = () => {
                     <b>@benverde_</b>
                   </a>
                 </li>
+                </ul>
               </p>
             </div>
             <img
