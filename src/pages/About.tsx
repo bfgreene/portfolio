@@ -53,7 +53,7 @@ const About = () => {
               alt="Benjamin Greene"
               loading="eager"
               decoding="async"
-              className="h-auto md:h-full w-auto object-cover self-stretch"
+              className="w-40 md:w-48 h-40 md:h-48 object-cover shrink-0"
               onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = "hidden"; }}
             />
           </div>
