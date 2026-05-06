@@ -7,6 +7,29 @@ import { projects } from "@/data/projects";
 const isPlaceholder = (src?: string) =>
   !src || src.endsWith("placeholder.svg") || src.endsWith(".svg");
 
+const personLinks: Record<string, string> = {
+  "Denis Budanoff": "https://www.mrbudanoff.com/denis",
+  "Brian Spadafora": "https://spadafora.studio/about",
+  "Lexie Alley": "https://www.lexiealley.com",
+  "Cheyenne Peerson": "https://www.cheyennepeerson.com",
+  "Elly Howard": "https://www.elly-howard.com",
+};
+
+const renderName = (name: string) => {
+  const url = personLinks[name];
+  if (!url) return name;
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline hover:text-accent"
+    >
+      {name}
+    </a>
+  );
+};
+
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
@@ -60,14 +83,18 @@ const ProjectDetail = () => {
 
           {(project.director || project.productionDesigner) && (
             <div className="text-xs text-muted-foreground mb-6 space-y-0.5">
-              {project.director && <p>Director: {project.director}</p>}
-              {project.productionDesigner && <p>Production Designer: {project.productionDesigner}</p>}
+              {project.director && <p>Director: {renderName(project.director)}</p>}
+              {project.productionDesigner && <p>Production Designer: {renderName(project.productionDesigner)}</p>}
             </div>
           )}
 
           <div className="max-w-2xl space-y-4 mb-10">
             {project.longDescription.map((para, i) => (
-              <p key={i} className="text-sm leading-relaxed">{para}</p>
+              <p
+                key={i}
+                className="text-sm leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: para }}
+              />
             ))}
           </div>
 
