@@ -108,7 +108,7 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Music video with large-format scenic painting, a 30-foot painted backdrop, and full art department coordination.",
     longDescription: [
-      "Music Video and other Media for Nothing's About to Happen to Me.",
+      "Music Video and other Media for <i>Nothing's About to Happen to Me</i>.",
       "I'll Change For You(link)",
       "Created esoteric drawings, food, and props.",
       "Helped set dress this mess."
