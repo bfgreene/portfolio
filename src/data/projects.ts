@@ -32,8 +32,8 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Period drama requiring full set construction of a five-room interior with over 200 period-accurate props and custom scenic painting.",
     longDescription: [
-      "Body-horror comedy",
-      "Created functioning custom video chat website for in-camera effects. Phone graphics, drawings, food styling.",
+      "Body-horror comedy.",
+      "Beyond Art-Director duties, created a functioning custom video chat website for in-camera effects. Phone graphics, drawings, food styling as well.",
     ],
     director: "Elly Howard",
     productionDesigner: "Brian Spadafora",
@@ -57,8 +57,8 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Short film requiring a complete retro set build on a soundstage. Custom signage fabrication and practical lighting integration.",
     longDescription: [
-      "Period Drama",
-      "Heavy Construction aspect, built a old stone fort inside of a country hut. Built hearth from wood frame and stryrofoam hearth. Texturing and aging." ,
+      "Period Drama.",
+      "This project had a heavy construction aspect, we built a old stone fort inside of a country hut. We also made a hearth from a wood frame and stryrofoam. Many texturing and aging techniques utilized." ,
       "Conceptualization and construction of a mythical machine that makes music from the wind.",
       "Managed many hands in the Art Department on tight schedule.",
     ],
@@ -85,13 +85,13 @@ export const projects: ProjectData[] = [
       "Commercial campaign with multiple set builds across three shooting days. Model-making, set dressing, and on-set art direction.",
     longDescription: [
       "Commercial",
-      "Several Sets for one-day shoot.",
+      "Many sets shot on a tight schedule.",
     ],
     director: "TJ Nitti",
   },
   {
     slug: "mitski",
-    title: "Mitski",
+    title: "Mitski : I'll Change for You",
     role: "Prop Master / Set Dresser",
     year: "2025",
     color: "hsl(260, 30%, 60%)",
@@ -108,9 +108,9 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Music video with large-format scenic painting, a 30-foot painted backdrop, and full art department coordination.",
     longDescription: [
-      "Music Video and Album Media",
+      "Music Video and other Media for Nothing's About to Happen to Me.",
       "I'll Change For You(link)",
-      "Created esoteric drawings, food, props.",
+      "Created esoteric drawings, food, and props.",
       "Helped set dress this mess."
     ],
     director: "Lexie Alley",
@@ -135,9 +135,9 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Independent feature film shot across multiple locations. Managed logistics, sourced locations, and coordinated a 12-person art department.",
     longDescription: [
-      "AI Horror Comedy",
-      "Technical Graphics and effects. &quot;AI taking over the network&quot; sequence, coding screens, managed monitors and laptops.",
-      "Construction of break-through wall to be easily kicked through. Other set dressing.",
+      "AI Horror Comedy.",
+      "Created technical Graphics and effects including an AI-taking-over-the-network sequence, character's screen contents, and managed the prop monitors and laptops.",
+      "Helped with construction of break-through stunt wall to be easily kicked through. Other set dressing.",
     ],
     director: "Tommy Savas",
     productionDesigner: "Cheyenne Peerson",
