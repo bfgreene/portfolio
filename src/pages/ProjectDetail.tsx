@@ -88,11 +88,11 @@ const ProjectDetail = () => {
             </div>
           )}
 
-          <div className="max-w-2xl space-y-4 mb-10">
+          <div className="max-w-2xl space-y-4 mb-10 font-body">
             {project.longDescription.map((para, i) => (
               <p
                 key={i}
-                className="text-sm leading-relaxed"
+                className="text-base md:text-[17px] leading-relaxed font-body"
                 dangerouslySetInnerHTML={{ __html: para }}
               />
             ))}
