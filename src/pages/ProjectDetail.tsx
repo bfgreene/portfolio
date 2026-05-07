@@ -88,7 +88,7 @@ const ProjectDetail = () => {
             </div>
           )}
 
-          <div className="max-w-2xl space-y-4 mb-10font-body">
+          <div className="max-w-2xl space-y-4 mb-10 font-body">
             {project.longDescription.map((para, i) => (
               <p
                 key={i}
